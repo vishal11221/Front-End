@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises in JavaScript</title>
+</head>
+<body>
+    <ol>
+        <li>A Promise is an object that represents the eventual result (or failure) of an asynchronous operation.
+            <ul>States of a Promise
+                <li>Pending – Initial state, not fulfilled or rejected.</li>
+                <li>Fulfilled – Operation completed successfully.</li>
+                <li>Rejected – Operation failed.</li>
+            </ul>
+        </li>
+    </ol>
+
+    <script>
+        new Promise((resolve) => {
+          resolve(10);
+        })
+        .then((num) => num * 2)
+        .then((result) => console.log(result)); // Output: 20
+    </script>
+</body>
+</html>

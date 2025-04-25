@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax in JavaScript</title>
+</head>
+<body>
+    <ol>
+        <li>AJAX stands for Asynchronous JavaScript and XML.</li>
+        <li> It's a technique to send/receive data from a server in the background using JavaScript, without refreshing the entire page.</li>
+    </ol>
+
+    <script>
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://jsonplaceholder.typicode.com/posts/1");
+        xhr.onload = function () {
+            if (xhr.status === 200) {
+                const data = JSON.parse(xhr.responseText);
+                console.log(data); // Shows the fetched post
+            }
+        };
+        xhr.send();
+    </script>
+</body>
+</html>

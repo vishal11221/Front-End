@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>replaceChild & removeChild</title>
+</head>
+<body>
+
+    <ol id="test">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Orange</li>
+        <li>Guava</li>
+    </ol>
+    
+    <ol>
+        <li>replaceChild():-replace child method replace the value that you target and add new value.</li>
+        <li>removeChild():-remove child method remove the value that you target.</li>
+    </ol>
+
+    <script>
+        var tag = document.createElement('li');
+        var txt = document.createTextNode('Radish');
+        tag.appendChild(txt);
+
+        var target = document.getElementById('test');
+        var oldElement = target.children[1];
+        // target.replaceChild(tag,oldElement);//it replace oldElement value into new value.
+        target.removeChild(oldElement);//it remove from first index.
+
+    </script>
+</body>
+</html>

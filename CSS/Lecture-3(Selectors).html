@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors in Css</title>
+</head>
+<body>
+    <ol>
+        <li>Id Selector:- It is used to give unique id to the element based on id name user can target to that particular element for styling and so on.It define with # symbol.</li>
+        <li>Class Selector:- It is used to give different class to the element based on class name user can target to that particular element for styling and so on.It define with . symbol.</li>
+        <li>Group Selector:- With the help of Group Selector user can target multiple element for styling.It define with , symbol.</li>
+        <li>Universal Selector:- It is used to target all the element for styling. It define with * symbol.</li>
+        <li>Element Selector:- It is used to target specific element for styling. It define with element name</li>
+    </ol>
+
+    <h3>Example:-</h3>
+
+    <div>
+        <h3 class="heading">Heading 3</h3>
+        <p id="paragraph">Hi i am a paragraph.</p>
+        <span>Hi i am a span</span>
+    </div>
+
+    <style>
+        /* Class Selector :- */
+        .heading{
+            color: red;
+            text-align: center;
+            background-color: black;
+        }
+       /* Id Selector :- */
+        #paragraph{
+            color: blue;
+            text-align: center;
+            background-color: lightgoldenrodyellow;
+        }
+        /* Element Selector :- */
+        span{
+            color: red;
+            text-align: center;
+            background-color: black;
+        }
+        /* Universal Selector :- */
+        *{
+            color: darkgreen;
+            text-align: center;
+            background-color: whitesmoke;
+        }
+
+       /* Group Selector:- */
+
+        h3,p,span{
+            color: darkgreen;
+            text-align: center;
+            background-color: whitesmoke;
+        }
+    </style>
+</body>
+</html>

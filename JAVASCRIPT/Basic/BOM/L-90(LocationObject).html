@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Object</title>
+</head>
+<body>
+   <ol>Location Object Property:- 
+       <li>hash:-The location.hash property sets or returns the anchor part of a URL,including the hash sign(#).</li>
+       <li>host:-it return host + port also.</li>
+       <li>hostname:-it return name of your host.</li>
+       <li>href:-it return url of your website.</li>
+       <li>origin:-what the origin path of your website.</li>
+       <li>pathname:-it return the path of your filename</li>
+       <li>port:-it return the port no of your url.</li>
+       <li>protocol:-it retun protocol of your website.</li>
+       <li>search:-it return just after question mark value from your url.</li>
+   </ol>
+
+   <ol>Location Method:- 
+       <li>Assign():-it assign new url to your current location.</li>
+       <li>Reload():-it refresh your page.</li>
+       <li>Replace()</li>
+   </ol>
+
+   <button onclick="rel()">Reload</button>
+
+   <script>
+     
+    console.log(location.hash);
+    console.log(location.host);
+    console.log(location.hostname);
+    console.log(location.href);
+    console.log(location.origin);
+    console.log(location.pathname);
+    console.log(location.port);
+    console.log(location.protocol);
+    console.log(location.search);
+   </script>
+
+   <script>
+     function rel(){
+        // location.reload(); //it reload the page.
+        location.assign('https://www.google.com'); // it assign new url to your current location.
+        location.replace('https://www.google.com'); //it work same like assign but it remove the history of your previous url.
+     }
+   </script>
+
+   <p>Difference between host and hostname is that host return host + portname but hostname return only its name</p>
+</body>
+</html>

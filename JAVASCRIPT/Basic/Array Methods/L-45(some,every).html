@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Some & Every Array methods</title>
+</head>
+
+<body>
+    <p>some():- It is used to check whether at least one of the elements of the array satisfies the given condition or not.If any one value match then it return value otherwise it goes to else block.</p>
+
+    <p>every():- It is used to check whether all the elements of the array satisfy the given condition or not.If all the value match then it return true otherwise false.</p>
+
+    <script>
+        var arr = [1, 2, 3, 4, 5];
+
+        var result = arr.some(checkAdult);
+        console.log(result);
+
+        function checkAdult(age) {
+            return age >= 18;
+        }
+        //it return false,because in that given array not any one value is greater than 18.
+
+        
+        var arr2 = [18,20,21,45,55];
+        var check = arr2.every(checkAdult);
+        console.log(check);
+
+        function checkAdult(age){
+            return age >= 18;
+        }
+        //it return true because each and every value is greater than 18
+    </script>
+</body>
+
+</html>

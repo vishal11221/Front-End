@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append Method test</title>
+    <style>
+        #test{
+           padding: 73px;
+           background-color: rgb(245, 187, 135);
+        }
+        p{
+           justify-content: center;
+           width: 80%;
+           margin: 0;
+           margin-left: 122px;
+        }
+    </style>
+</head>
+<body>
+    <div id="test">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae deserunt dolorum accusantium corrupti saepe, cumque quis reprehenderit accusamus sapiente alias beatae animi provident voluptas soluta magni ratione, esse repellat facere quam voluptatum doloremque facilis voluptatem? Omnis aliquam non obcaecati numquam ex, totam tempore dignissimos consequuntur maxime quo ad debitis, accusamus repellat esse ipsa dolore optio labore! Laudantium eius omnis numquam, rem explicabo, iusto voluptatum, accusantium deleniti fugit doloremque recusandae at dolorem? Eaque molestias repellendus eligendi. Nihil provident neque nam sapiente, ea maiores aut!</p>
+    </div>
+    
+    <script>
+       /* var tag = document.createElement("h3");//create h3 tag
+        var txt = document.createTextNode("Third heading");//create text for h3
+        tag.appendChild(txt);//append text into h3
+
+        var target = document.getElementById("test");//target test div
+        // target.insertAdjacentElement("beforebegin",tag); append just beforebegin test div
+        // target.insertAdjacentElement("afterbegin",tag); append just afterbegin test div 
+
+        document.write(target);//print that on the screen.
+         */
+
+        /*How to create tag and text at a time and append it where we want ? 
+          var elem = "<h2>Second heading</h2>";//create h2 tag and add text in it.
+          var target = document.getElementById("test");//target test div
+        //   target.insertAdjacentHTML("beforebegin",elem); insert tag just before the test div
+        //   target.insertAdjacentHTML("afterbegin",elem); insert tag just after the div start 
+        //   target.insertAdjacentHTML("afterend",elem); insert tag just after your div end 
+        //    target.insertAdjacentHTML("beforeend",elem); insert tag just before div end 
+          document.write(target);//display it.
+          */
+
+        //How to create text and append it ?
+          var txt = "This is my new text";
+          var target = document.getElementById('test');
+          target.insertAdjacentText("afterbegin",txt);
+          document.write(target);
+
+    </script>
+</body>
+</html>

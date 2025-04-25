@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prompt</title>
+</head>
+<body>
+    <p>Prompt is used to take input from user and print value according to their condition.</p>
+
+
+    <script>
+       var marks = prompt('Enter your marks')
+
+       if(marks>=300){
+          document.write('You are in first division');
+       }else if(marks<300 && marks>249){
+          document.write('You are in Second division');
+       }else if(marks<250 && marks>200){
+           document.write('You are in Third division');
+       }else{
+           document.write('You fail');
+       }
+    </script>
+</body>
+</html>

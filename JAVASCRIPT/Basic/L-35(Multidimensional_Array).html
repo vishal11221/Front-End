@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multidimensional Array</title>
+</head>
+<body>
+    <p>With the help of Multidimensional Array,we print the data in tabular form.</p>
+
+    <script>
+         var arr = [
+               ["Name","Age", "Gender","Class" + "<br>"],
+               ["Vishal","23", "Male","MCA" + "<br>"],
+               ["Pankaj","25", "Male","B.com" + "<br>"],
+               ["Sarah","18", "Male","BCA"+ "<br>"],
+               ["Rohan","24", "Male","M.A"]
+
+        ];
+        // document.write(arr[0][1]); it give first index row of 1 index value that is age
+
+        document.write("<table border = 1px>");
+        for(var i = 0; i <arr.length; i++){
+            document.write("<tr>");
+            for(var j = 0; j<arr[i].length; j++){
+              document.write( "<td>" + arr[i][j] + "</td>");
+            }
+            document.write("</tr>");   
+        }
+        document.write("</table>");
+
+    </script>
+</body>
+</html>

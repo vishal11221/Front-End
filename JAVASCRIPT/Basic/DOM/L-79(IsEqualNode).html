@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IsEqualNode Method</title>
+</head>
+<body>
+    IsEqualNode method check whether the two nodes are equal with some following condition:- 
+    <ol>
+        <li>Same Node Type</li>
+        <li>Same Node Name</li>
+        <li>Same Node Value</li>
+        <li>Same ChildNodes</li>
+        <li>Same attributes</li>
+        <li>Same attribute values</li>
+    </ol>
+
+    <ul id="list-1">
+       <li>Orange</li>
+       <li>Banana</li>
+       <li>Apple</li>
+       <li>Grapes</li>
+    </ul>
+
+    <ul id="list-2">
+        <li>Guava</li>
+        <li>Orange</li>
+        <li>PineApple</li>
+    </ul>
+
+    <script>
+        var elem1 = document.getElementById('list-1').firstElementChild;
+        var elem2 = document.getElementById('list-2').children[1];
+        var cmpr = elem1.isEqualNode(elem2);
+        console.log(cmpr);//It return true because list-1 firstElementChild is Orange and list-2 second index is also orange.
+    </script>
+</body>
+</html>

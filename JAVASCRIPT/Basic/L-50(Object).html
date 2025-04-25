@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+    <p>Object is a collection of property and value, the properties are different like in one object we store Array objects,functions,nested objects and nested array also.</p>
+
+    <script>
+       //We can store multiple function,multiple object,multiple Array in single object
+
+      var a = {
+            fname : "Vishal",
+            lastname : "Raj",
+            contact : 8809739667,
+            email : "itsvishalraj98@gmail.com",
+            friends : ["kundan","Raushan","Nandan"],
+            living : {
+                PermanentAddress: "Motihari",
+                temporaryAddress: "Banglore",
+            },
+            salary : function(){
+                return 250000;
+            },
+            fullname : function(){
+                return this.fname + " " + this.lastname;
+            }
+        }
+        // document.write(a);
+        document.write(a.fname + "<br>");//vishal
+        document.write(a.email);//itsvishalraj11@gmail.com
+        console.log(a);//Object
+        console.log(a.salary());550000
+        console.log(a.fullname());//VishalRaj
+        console.log(a.living.PermanentAddress);//Motihari
+    </script>
+</body>
+</html>

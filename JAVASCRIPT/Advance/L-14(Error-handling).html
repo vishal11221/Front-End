@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling</title>
+</head>
+<body>
+    <ol>
+        <li>In JavaScript, error handling allows you to:- Detect when something goes wrong, Handle it appropriately, Prevent the entire program from breaking</li>
+    </ol>
+
+    <script>
+        try {
+        // Code that may throw an error
+        let result = riskyFunction();
+        console.log(result);
+       } catch (error) {
+        // Handle the error here
+        console.error("Something went wrong:", error.message);
+      }
+    </script>
+</body>
+</html>

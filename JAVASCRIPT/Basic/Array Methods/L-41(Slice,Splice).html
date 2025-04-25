@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slice & Splice</title>
+</head>
+<body>
+    
+    <script>
+        //With the help of slice method,we get the data from that range to that range.
+      //Note:-In slice method,we pass two parameter(start,end)
+      var a = ['Rohan','Sohan','Mohan','Arman'];
+          var b = a.slice(2,3);//it display only data from 2nd index and before 3rd index.
+          var b = a.slice(2);//it display from 2nd index to last index data.
+          var b = a.slice(-2,-3)//it display from reverse data only.
+          console.log(b);
+
+      //With the help of splice method,we set the data from that range to that range with their index no.
+      //Note:-In Splice method,we pass three parameter(index no,how many deleted,new value)
+         a.splice(2,0,'Tinku','Pinku');
+        //  document.write(a);
+
+       //We want 2,3 deleted from their index and at that place new value added then:-
+       a.splice(2,4, "yash","Anush" );
+        document.write(a + "<br>");
+
+     //With the help of splice,we delete data from that range to that range.
+       a.splice(2,2);
+       document.write(a);
+    </script>
+</body>
+</html>

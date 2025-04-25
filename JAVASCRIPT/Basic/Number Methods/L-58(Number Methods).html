@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Methods(number,parseInt,parseFloat,isFinite,isInteger,toFixed,toPrecision)</title>
+</head>
+<body>
+
+    <ol>
+        <li>Number</li>
+        <li>parseInt</li>
+        <li>parseFloat</li>
+        <li>isFinite</li>
+        <li>isInteger</li>
+        <li>toFixed</li>
+        <li>toPrecision</li>
+    </ol>
+    <p>Number method always return number when you give string or any other value.</p>
+    <p>parseInt method always return Integer value if you give float value.</p>
+    <p>parseFloat method always return Float value if you give string value.</p>
+    <p>isFinite method check value will be countable or not,if value is countable then it return true otherwise false.</p>
+    <p>isInteger method check value is Integer or not if value is integer then it return true otherwise false.</p>
+    <p>Note:-If parseInt not find any value from given no then it return NAN.</p>
+    
+    <script>
+        var a = "99";
+        var num = Number(a);
+        document.write(num + 10 + "<br>");//it return 109
+    </script>
+
+<script>
+    var a = true;
+    var num = Number(a);
+    document.write(num + 10 + "<br>");//it return 1 because true has 1 value and false has 0 value.
+</script>
+
+<script>
+    var a = "99 88";
+    var num = Number(a);
+    document.write(num + 10 + "<br>");//it return NaN 
+</script>
+
+<script>
+    var a = "9.9";
+    var num = parseInt(a);
+    document.write(num + "<br>");//it return 9
+
+</script>
+
+<script>
+    var a = "9.9";
+    var num = parseFloat(a);
+    document.write(num + "<br>");//it return 9.9
+</script>
+
+<script>
+    var a = Infinity;
+    var num = isFinite(a);
+    document.write(num + "<br>");//it return false
+</script>
+
+<script>
+    var a = 10.5;
+    var num = Number.isInteger(a);
+    document.write(num + "<br>");//it return false because it is float value
+</script>
+
+<script>
+    var a = 10.56789;
+    var num = a.toFixed(2);
+    document.write(num + "<br>");//it select two value after decimal and Fixed it
+</script>
+
+<script>
+    var a = 10.56789;
+    var num = a.toPrecision(3);
+    document.write(num);//it select three value after decimal and round it
+</script>
+</body>
+</html>

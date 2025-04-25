@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <p>In a javascript,Array is a non-primitive datatype that is used to store multiple value of different datatype in a single variable.</p>
+
+
+    <script>
+        var array = ['Mohan','BCA',9110747565,12.000];
+        console.log(array);
+
+        var arr = ['vishal','rohan','tinku','pankaj'];
+        document.write(arr + "<br>"); //it print the original value;
+        // arr.sort();//sort method sort the array in ascending order.
+        arr.sort().reverse();//sort().reverse() method sort your array in descending order.
+        document.write(arr+ "<br>"); //it print the sorting value by default it print in ascending order.
+
+        arr.reverse();
+        document.write(arr); //it print the value in reverse order.
+
+//Printing Array value with for loop
+        var arr2 = [10,"vishal",true,null,"rohan"];
+            document.write("<ol>");
+            for (var i = 0; i<5; i++){
+               document.write("<li>" + arr2[i] + "</li>");
+             }
+            document.write("</ol>");        
+
+
+//How to print the array value with the help of forEach loop.
+        var arr3 = ['Vishal','MCA',8809739667,22.842];
+    
+        arr3.forEach(arr3 => {
+            document.write(arr3);
+        });
+    </script>
+</body>
+</html>

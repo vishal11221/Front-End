@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String-Method-2(charAt,charCodeAt,fromCharCode,concat,split,repeat,slice,substr,subString,toString,toString,valuOf)</title>
+</head>
+<body>
+    <p>charAt method is used to find the value from index no.If value is not their at given position then nothing it return.</p>
+    <p>charCodeAt method is used to find the ASCII value from index no from existing string.</p>
+    <p>fromCharCode method is used to find the ASCII value from index no directly not from existing string and all.</p>
+    <p>concat method is used to merge two or more than two string.</p>
+    <p>split method is used to break the existing string and return new array.</p>
+    <p>repeat method is used to repeat the existing string.In this method we pass parameter as no that means how many times we repeat our existing string.</p>
+    <p>slice method is used to get the value from that index to that index.In that we send two parameter from starting to end.</p>
+    <p>substr method is used to get the value from that index to that index.In that we send two parameter from starting to end.</p>
+    <p>subString method is used to get the value from that index to that index.In that we send two parameter from starting to end.</p>
+    <p>toString method is used to convert integer value into string only.</p>
+    <p>valueOf method is default method of string it return the string value as it.</p>
+
+
+    <script>
+        var str = 'javascript is great language now a days';
+        var chAt = str.charAt(5);
+        console.log(chAt);//it return c because c find at fifth index.
+
+        var str2 = 'Php is a backend language';
+        var chrcdAt = str2.charCodeAt(2);
+        console.log(chrcdAt);//it return 112 because at 2nd index small p has 112 ASCII value.
+
+        var a = String.fromCharCode(65);
+        console.log(a);//it return capital A because at 65 ASCII value is A.
+
+        var frontEnd = 'Angular';
+        var backend =  'Nodejs';
+        var fullstack = frontEnd.concat(backend);
+        console.log(fullstack);
+
+        var str3 = 'Angular is a javascript framework';
+        var splt = str3.split('a');
+        console.log(splt);
+
+        var str4 = 'Bootstrap is a css framework';
+        var rpt = str4.repeat(2);
+        console.log(rpt);
+
+        var str5 = 'Reactjs is a javascript library';
+        var slc = str5.slice(2,10);
+        console.log(slc);//it return the value between 2nd index to 10th index.
+
+        var int = 50;
+        var result = int.toString();
+        console.log(result + 70);//it return 5070 because toString method convert 50 into as a string then concatinate with 70.
+
+    </script>
+</body>
+</html>

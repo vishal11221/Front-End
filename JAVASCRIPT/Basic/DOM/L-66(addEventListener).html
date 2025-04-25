@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addEventListener</title>
+</head>
+<body>
+    
+    <div id="outer" style="border: 2px solid black; height: 350px; width: 350px; background-color:blanchedalmond;">
+        <h3>Outer</h3>
+        <div id="Inner" style="border: 1px solid black; height: 200px; width: 220px; margin-left: 48px;margin-top: 32px; background-color: blueviolet;">
+            <h3>Inner</h3>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('#Inner').addEventListener('click',function(){
+            alert('Inner div call');
+        })
+
+        document.querySelector('#outer').addEventListener('click',function(){
+            alert('Outer div call');
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Statement</title>
+</head>
+<body>
+    <p>Give one example,Switch Statement is different from other conditional operators ? <br>
+        if-then-else statement can test expressions based on ranges of values or conditions, whereas a switch statement tests expressions based only on a single integer, enumerated value, or String object.
+        <br>
+        Syntax:- <br>
+
+        switch(expression){
+            case condition 1:statement(s)
+            break;
+            case condition 2:statement(s)
+            break;
+            case condition 3:statement(s)
+            break;
+
+            default:statement(s)
+        }
+    </p>
+
+    <script>
+        var day = parseInt(prompt('Enter the day number'));
+
+        switch (day){
+            case 0:
+                document.write('Today is Sunday');
+            break;
+            case 1:
+                document.write('Today is Monday');
+            break;
+            case 2:
+                document.write('Today is Tuesday');
+            break;
+            case 3:
+                document.write('Today is Wednesday');
+            break;
+            case 4:
+                document.write('Today is Thursday');
+            break;
+            case 5:
+                document.write('Today is Friday')
+            break;
+
+            case 6:
+                document.write('Today is saturday');
+            break;
+
+            default:
+                document.write('Please Enter Correct value to check');
+        }
+    </script>
+
+    <script>
+        var age = parseInt(prompt('Enter your age'));
+
+        switch (true) {
+            case (age=18 && age>18):
+                document.write('You are eligible for voting');
+                
+            break;
+
+            case (age!=18 && age<18):
+                document.write('You are not eligible for voting');
+                  
+            break;
+            default:
+                document.write('Better luck for next time');
+                break;
+        }
+    </script>
+
+</body>
+</html>

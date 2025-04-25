@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Practice</title>
+</head>
+<body>
+    <p id="para">This is my paragraph text.</p>
+    <br>
+    <button onclick="changeText()">Click</button>
+    <script src="practice.js"></script>
+
+    <script>
+        function changeText(){
+            var changeTxt = document.getElementById('para');
+            changeTxt.innerHTML = 'This is changed text';
+        }
+    </script>
+</body>
+</html>

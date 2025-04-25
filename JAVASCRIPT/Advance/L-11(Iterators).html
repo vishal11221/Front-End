@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iterators in JavaScript</title>
+</head>
+<body>
+    <ol>
+        <li>An iterator is an object that provides a way to access elements one at a time in a sequence.</li>
+    </ol>
+
+    <script>
+        function createIterator(array) {
+            let index = 0;
+            return {
+                next: function () {
+                if (index < array.length) {
+                    return { value: array[index++], done: false };
+                } else {
+                    return { value: undefined, done: true };
+                }
+                }
+            };
+        }
+
+        const myIterator = createIterator(["a", "b", "c"]);
+
+        console.log(myIterator.next()); // { value: "a", done: false }
+        console.log(myIterator.next()); // { value: "b", done: false }
+        console.log(myIterator.next()); // { value: "c", done: false }
+        console.log(myIterator.next()); // { value: undefined, done: true }
+
+    </script>
+</body>
+</html>

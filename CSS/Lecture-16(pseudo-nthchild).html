@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo nth child</title>
+    <style>
+        /* Pseudo-Elements */
+        div > :nth-child(2){
+            color: red;
+        }
+        input[type="text"]{
+            color: blue;
+        }
+        a[href]{
+            color: green;
+        }
+        li:nth-child(even){
+            color: brown;
+        }
+        li:nth-child(odd){
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <p>Pseudo nth child:- It is used to style elements based on their position or content.</p>
+
+    <ol>
+        <li>List 1</li>
+        <li>List 2</li>
+        <li>List 3</li>
+        <li>List 4</li>
+        <li>List 5</li>
+        <li>List 6</li>
+    </ol>
+
+    <h3>Example:-</h3>
+
+    <div>
+        <h3>Heading 3</h3>
+        <p>Hi i am a paragraph</p>
+        <label for="username">Username</label>
+        <input type="" placeholder="Enter Username">
+        <a href="https://google.com">Go to Google</a>
+    </div>
+</body>
+</html>

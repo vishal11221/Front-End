@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Selectors</title>
+    <style>
+        /* Pseudo-Classes  */
+         .para:first-child{
+            color: yellow;
+        }
+        /* Pseudo-Elements */
+        .heading::first-letter{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p class="para">Pseudo Selectors:- Pseudo-selectors in CSS are special keywords that allow you to style elements based on their state, position, or interaction without modifying the HTML. They are categorized into two main types:-</p>
+    <ol> 
+        <li>Pseudo-Classes:- It is used to style elements based on their state, position, or interaction.</li>
+        <li>Pseudo-Elements:- It is used to style elements based on their position or content.</li>
+    </ol>
+
+    <h3>Example:-</h3>
+
+    <div>
+        <h3 class="heading">Heading 3</h3>
+        <p>Hi i am a paragraph</p>
+    </div>
+
+    <p>Note:- when pseudo class is working, if you give two paragraph so it apply on parent element only.</p>
+</body>
+</html>

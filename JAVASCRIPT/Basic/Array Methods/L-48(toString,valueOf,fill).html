@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array method toString,valueOf,fill</title>
+</head>
+<body>
+    <p>The toString() method converts an array into a String and return result.And when array value is converted into string then not any array method apply on it.</p>
+    <p>The valueOf() method returns the array itself. The valueOf() method does not change the original array. fruits. valueOf() returns the same as fruits.The valueOf method print the array value.</p>
+    <p>The fill() method fills all the elements in an array with a static value.For example you fill Ram to all array value then you use fill() function to do this.</p>
+
+    <script>
+        var arr = ['Rahul','karan','aman','pankaj'];
+        arr.toString();
+        document.write(arr);
+    </script>
+    <script>
+        var a = ['Rohan','Sohan','Mohan','Chohan'];
+        a.fill('Ram');
+        console.log(a);
+    </script>
+</body>
+</html>

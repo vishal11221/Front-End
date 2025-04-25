@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM cloneNode Method</title>
+</head>
+<body>
+    
+    <p>cloneNode method copy from existing list and paste it into another list.</p>
+    <ul id="list1">
+        <li>Apple</li>
+        <li>Orange</li>
+        <li>Guava</li>
+        <li>Banana</li>
+    </ul>
+    <ul id="list2">
+        <li>Carrot</li>
+        <li>Radish</li>
+    </ul>
+
+    <p>Note:-cloneNode method work when we pass parameter as true then it copy inner value also.</p>
+
+    <script>
+        var target = document.getElementById("list1").children[0];//It target the list1 id of first index children that is apple
+        var copyElement = target.cloneNode(true);//It copy the apple
+        console.log(copyElement);
+
+        document.getElementById("list2").appendChild(copyElement);//It append apple to the list2 at first position.
+    </script>
+</body>
+</html>

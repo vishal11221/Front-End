@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Template Area</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            background-color: #2196F3;
+            padding: 10px;
+            grid-template-areas: 
+            'header header header'
+            'left middle right'
+            'footer footer footer';
+        }
+    </style>
+</head>
+<body>
+    <p>We can set the area of our template using grid-template-area.</p>
+
+    <h3>Example:-</h3>
+
+    <div class="container">
+        <h3>Heading 3</h3>
+        <p>Hi i am a paragraph</p>
+    </div>
+</body>
+</html>

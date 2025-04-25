@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For in loop in javascript</title>
+</head>
+<body>
+    <p>Basically,we use For in loop to print object value.</p>
+
+    <script>
+        var student = {
+            name: 'vishal',
+            course: 'mca',
+            marks: 83.5,
+            contact: 8809739667,
+            address: 'motihari'
+        }
+        for (const key in student) {
+           document.write(key + ": " + student[key] + "<br>");
+        }
+    </script>
+</body>
+</html>

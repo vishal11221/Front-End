@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Create Method</title>
+</head>
+<body>
+    
+    <ol>
+        <li>createElement:-With the help of createElement,we create tag.</li>
+        <li>createTextNode:-With the help of createTextNode,we create text for particular tag.</li>
+        <li>createComment:-With the help of createComment,we create comment for particular tag.</li>
+    </ol>
+
+    <script>
+        /* How to create tag
+            var tag = document.createElement('p');
+           console.log(tag);
+
+           var tag = document.createElement("h2");
+           console.log(tag);
+
+        */
+
+        //How to create text
+          var txt = document.createTextNode('This is my first text');
+          console.log(txt);
+
+        //How to create comment
+          var cmt = document.createComment('This is comment');
+          console.log(cmt);
+         
+
+    </script>
+</body>
+</html>

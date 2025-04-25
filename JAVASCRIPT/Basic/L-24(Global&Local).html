@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global & Local Variable</title>
+</head>
+
+<body>
+  <p>In this lecture,we see the use of Global & Local variable.</p>
+  <p>Note:-We use Global variable outside of function or block and inside a function also,but in the case of Local variable we use inside the block only not outside the block.</p>
+
+  <script>
+    var a = "Vishal Raj";// variable a is global variable
+
+    function f() {
+      var b = 'Rohan Raj'
+      document.write(a);
+
+    }
+    f();
+    document.write(a);//We easily print the value of a because, a is declare globaly.
+    document.write(b);//We cannot access b outside of function because b is declare inside function only.
+  </script>
+</body>
+
+</html>

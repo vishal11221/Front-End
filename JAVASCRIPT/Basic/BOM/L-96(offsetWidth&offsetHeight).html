@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>offsetWidth & offsetHeight</title>
+    <style>
+        #box{
+            border: 10px solid black;
+            background-color: beige;
+            padding: 10px;
+            height: 300px;
+            width: 300px;
+            overflow: auto;
+        }
+        #inner-box{
+            background-color: aquamarine;
+            padding: 5px;
+            height: 150px;
+            width: 1200px;
+        }
+    </style>
+</head>
+<body>
+    <p>offsetWidth & offsetHeight returns the width and height of an element(in pixel) including padding,border and scrollbar.</p>
+
+    <div id="box">
+        <div id="inner-box"></div>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio veritatis minima ea et aliquam, sint obcaecati ipsum similique aut cum expedita voluptatem consequatur commodi totam hic ad quia possimus maxime! Temporibus, perferendis repellendus! Distinctio obcaecati aliquam incidunt, culpa quaerat excepturi hic ipsam eos voluptates porro corporis iusto ea unde at esse id! Perspiciatis, blanditiis distinctio facilis iste odit consequatur minus aut? Provident distinctio veritatis at est perspiciatis corrupti deleniti aliquid iusto rem tempore tenetur, exercitationem ad ipsam, molestias iste ratione explicabo quaerat natus voluptatum hic facere unde enim, neque architecto. Ad id vel nulla veritatis, cum tempore quibusdam nihil sequi et, eius laborum blanditiis sapiente maxime. Quaerat consequuntur quis maxime voluptates quod, accusamus porro cumque nesciunt, necessitatibus pariatur nam possimus praesentium ut. Veniam vel dolorum repellendus, at inventore, nesciunt autem molestias nostrum impedit velit quibusdam omnis quasi illum quam obcaecati est vero laudantium? Nemo eos accusamus laboriosam facere. Laudantium consectetur nesciunt adipisci ad incidunt quos, mollitia natus animi facilis obcaecati cupiditate nulla praesentium error voluptate asperiores quod porro suscipit, itaque neque. Maiores eius sequi obcaecati. Quas maxime ipsum impedit doloribus. Modi natus mollitia atque eius nihil voluptatibus, officia ullam beatae maxime laboriosam perspiciatis ad accusantium labore impedit tempore repellendus facilis repellat, ducimus velit sapiente quaerat doloribus totam architecto. Omnis perspiciatis voluptatum animi aspernatur! Cupiditate ipsa voluptas nisi ut molestiae, voluptate blanditiis esse suscipit autem quisquam iure dolores mollitia incidunt ducimus ex provident nam cumque corrupti eos recusandae laboriosam. Expedita aperiam praesentium dolores illo voluptatibus dolorum itaque tempora asperiores corrupti assumenda, consequatur rem vitae quidem harum a repellendus culpa iste quas? Inventore odio possimus, maiores fugiat impedit asperiores, necessitatibus voluptatibus hic vel exercitationem quod consequatur. Nam natus cum est quam hic? Tempore harum nihil minima vero optio laborum eius, molestias ipsa nobis, explicabo reprehenderit dolorem fugit magni blanditiis delectus ea. Odit quis debitis sunt corrupti necessitatibus alias cum soluta! Et corrupti facilis quo dolorem aliquam voluptatum repellat quasi doloribus odit inventore sequi ea cumque quos praesentium corporis, voluptatem dignissimos consequuntur magnam commodi. Exercitationem vel, soluta, eius ipsum quisquam aspernatur expedita sequi libero natus explicabo sint earum culpa quidem tempore! Neque, omnis iure dolores in natus qui perferendis, debitis vel rem ex beatae, nesciunt ratione suscipit nam accusamus? Iste recusandae, fugit, eligendi eum perferendis, dicta tempore esse in est earum laboriosam libero cumque blanditiis illum ea odio. Hic ut odit quae illum temporibus cumque pariatur voluptatem unde non deserunt. Commodi atque perferendis dolore deserunt quia nesciunt, deleniti sapiente earum vero! Praesentium deleniti architecto maxime accusantium autem alias facere asperiores sit. Dicta ea ipsum cum odio eligendi quam aspernatur eos ducimus voluptates quas id, expedita quos aliquid alias mollitia possimus fugiat culpa, totam molestiae quis suscipit excepturi minima! Eius totam ab iure quae magnam consequuntur explicabo, labore perferendis debitis repellendus, quas expedita officiis neque quidem veritatis? Nisi ad esse, iusto alias accusamus dolorum repudiandae distinctio veniam doloribus fugiat ea corporis consequuntur facere neque quae fuga laborum error atque quis eaque excepturi perferendis ipsum in ipsam? Aspernatur iusto esse eius animi. Ullam reprehenderit sapiente suscipit eligendi tempora nesciunt dicta error vel sequi quod alias deleniti architecto corporis voluptatem unde eum molestias, labore quibusdam. Eligendi, quaerat repellat itaque, praesentium, totam obcaecati voluptatem consectetur et cum voluptatibus est velit quam dicta harum facilis officia ipsum sunt atque laudantium iusto sit odit! Asperiores, illum autem rerum recusandae inventore reiciendis laborum eos quisquam adipisci ducimus nobis blanditiis quo perspiciatis qui omnis laudantium perferendis? Quod eveniet, neque voluptas assumenda perferendis pariatur. Quisquam officiis nostrum, ad in laboriosam magni, ratione eius minima numquam accusantium, doloremque velit cum amet consequatur quod est porro reiciendis totam impedit commodi repudiandae consequuntur. Eaque, mollitia.
+    </div>
+    
+    <script>
+        var target = document.querySelector('#box');
+        var width = target.offsetWidth;
+        var height = target.offsetHeight;
+        console.log('offsetWidth: ' + width);//The actual width of div is 300 but it return 340 because it take 40px extra due to border.
+        console.log('offsetheight: '  + height);//The actual height of div is 300 but it return 340 because it take 40px extra due to border.
+    </script>
+</body>
+</html>

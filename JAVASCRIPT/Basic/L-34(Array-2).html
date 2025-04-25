@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Array Method-2</title>
+</head>
+<body>
+    
+    <script>
+        var arr = new Array();
+        arr[0] = "vishal";
+        arr[1] = 12;
+        arr[2] = true;
+
+        document.write("<ol>");
+
+        for(var index = 0; index<3; index++){
+            document.write( "<li>" + arr[index] + "</li>");
+        }
+        document.write("</ol>");
+    </script>
+
+<script>
+    var arr = new Array();
+   
+    document.write("<ol>");
+    for(var i=0; i<3; i++){
+      arr[i] = prompt("Enter the value you want to print it");
+    }
+
+    for(var index = 0; index<3; index++){
+        document.write( "<li>" + arr[index] + "</li>");
+    }
+    document.write("</ol>");
+</script>
+
+
+</body>
+</html>

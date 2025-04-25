@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Rows and Columns</title>
+    <style>
+        .container{
+            display: grid;
+            grid-column-gap : 10px;
+            grid-row-gap : 10px;
+        }
+        .container:first-child{
+           grid-column-start: 1;
+           grid-column-end: 3;
+           grid-row-start: 1;
+           grid-row-end: 3;
+        }
+    </style>
+</head>
+<body>
+    <p>We can divide the grid into multiple rows and columns.</p>
+    <p>We can span our box like as row and column wise.</p>
+
+    <h3>Example:-</h3>
+
+    <div class="container">
+        <h3>Heading 3</h3>
+        <p>Hi i am a paragraph</p>
+    </div>
+</body>
+</html>

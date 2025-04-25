@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>offsetTop & offsetLeft</title>
+</head>
+<body>
+    <p>The offsetLeft property returns the left position (in pixels) relative to the parent.</p>
+    <p>The offsetTop property returns the top position (in pixels) relative to the parent.</p>
+
+    <div id="test">
+
+    </div>
+
+    <script>
+        const element = document.getElementById("test");
+        let pos1 = element.offsetTop;
+        let pos2 = element.offsetLeft;
+        console.log(pos1);
+        console.log(pos2);
+    </script>
+    
+</body>
+</html>

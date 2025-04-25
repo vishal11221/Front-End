@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symbols in JavaScript</title>
+</head>
+<body>
+    <ol>
+        <li>A Symbol is a primitive data type introduced in ES6.
+            It is used to create unique identifiers for object properties — even if they have the same description.
+        </li>
+        <li>Avoiding property name collisions in objects</li>
+        <li>Creating private-like properties</li>
+        <li>Customizing built-in behavior (like iterators, toString, etc.)</li>
+    </ol>
+    <script>
+        const a = Symbol("key");
+        const b = Symbol("key");
+        console.log(a === b); // false
+    </script>
+</body>
+</html>

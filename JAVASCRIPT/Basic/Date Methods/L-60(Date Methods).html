@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Methods</title>
+</head>
+<body>
+    <ol>
+        <li>toDateString():-</li>
+        <li>getDate():-</li>
+        <li>getFullYear():-</li>
+        <li>getMonth():-</li>
+        <li>getDay():-</li>
+        <li>getHours():-</li>
+        <li>getMinutes():-</li>
+        <li>getSeconds():-</li>
+        <li>getMilliseconds():-</li>
+        <li>setDate():-</li>
+        <li>setFullYear():-</li>
+        <li>setMonth():-</li>
+        <li>setHours():-</li>
+        <li>setMinutes():-</li>
+        <li>setSecond():-</li>
+        <li>setMilliseconds():-</li>
+    </ol>
+
+
+    <script>
+        //Date() method
+        var now = new Date();
+        document.write(now + "<br>");//it return date and time 
+
+        //toDateString() method
+        var tds = new Date();
+        document.write(tds.toDateString() + "<br>");//it return date and day only.
+
+         //getDate() method
+         var gd = new Date();
+        document.write(gd.getDate() + "<br>");//it return current date only
+
+        //getFullYear() method
+        var gfy = new Date();
+        document.write(gfy.getFullYear() + "<br>");//it return current year only.
+
+        //getMonth() method
+        var gm = new Date();
+        document.write(gm.getMonth() + "<br>");//it return current Month only.
+
+        //getDay() method
+        var gd = new Date();
+        document.write(gd.getDay() + "<br>");//it return current Day only.
+
+        //getHours() method
+        var gh = new Date();
+        document.write(gh.getHours() + "<br>");//it return current hours only.
+
+        //getMinutes() method
+        var gmin = new Date();
+        document.write(gmin.getMinutes() + "<br>");//it return current minutes only.
+        
+         //getSecond() method
+         var gs = new Date();
+        document.write(gs.getSeconds() + "<br>");//it return current second only.
+
+        //getMilliseconds() method
+        var gmilli = new Date();
+        document.write(gmilli.getMilliseconds() + "<br>");//it return current Milliseconds only.
+
+        //setDate method
+        var sd = new Date();
+        sd.setDate(12);
+        document.write(sd + "<br>");//it return the value that you set in method
+
+         //setFullYear method
+         var sFY = new Date();
+        sFY.setFullYear(2020);
+        document.write(sFY + "<br>");//it return the value that you set in method
+
+        //setMonth method
+        var sm = new Date();
+        sm.setMonth(4);
+        document.write(sm + "<br>");//it return the value that you set in method
+
+         //setHour method 
+         var sh = new Date();
+        sh.setHours(12);
+        document.write(sh + "<br>");//it return the value that you set in method
+
+        //setminute method
+        var smint = new Date();
+        smint.setMinutes(13);
+        document.write(smint + "<br>");//it return the value that you set in method
+
+        //setsecond method 
+        var ss = new Date();
+        ss.setSeconds(33);
+        document.write(ss + "<br>");//it return the value that you set in method.
+
+        
+        //setMillisecond method
+        var ms = new Date();
+        ms.setMilliseconds(44);
+        document.write(ms + "<br>");//it return the value that you set in method
+
+        //if you want to show current date,month and year in one output then:-
+        var all = new Date();
+        document.write(all.getDate() + "/" + all.getMonth() + "/" + all.getFullYear());
+
+
+    </script>
+</body>
+</html>

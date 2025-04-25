@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Event(focus,blur,input)</title>
+</head>
+<body>
+    <ol>
+        <li>keydown:-When we keydown from our keyboard then that event happen.</li>
+        <li>keypress:-When we keypress from our keyboard then that event happen.</li>
+        <li>keyup:-When we keyup from our keyboard then that event happen.</li>
+        <li>focus:-When we mouse hover on field that event apply.</li>
+        <li>blur:-When we loose the focus then that event apply.</li>
+        <li>input:-When we type something in that area then that event happen.</li>
+        <li>change:-When we change value from input field that event trigger.</li>
+        <li>select:-When we select the value from input field then that event trigger.</li>
+        <li>submit:-When we submit the form value then that event trigger.</li>
+        <li>invalid:-invalid event happen when we give click on submit button but the form value is invalid then that event trigger.</li>
+    </ol>
+    <p>Note:-When you have input box and you want to print that input box value print at a time when you type in input box then first you create textarea in a div and give it's id then apply oninput event declare one function inside function target that id and display their innerText value.</p>
+
+    <form action="">
+        <label for="">Name</label> <input type="text" id="fname" onfocus="focusf(this)" onblur="blurf(this)" oninput="inputf(this)"> <br> <br>
+        <label for="">Class</label> <input type="text" id="" onfocus="focusf(this)" onblur="blurf(this)"> <br> <br>
+        <label for="">Country</label>
+        <select name="" id="" onfocus="focusf(this)" onblur="blurf(this)">
+            <option value="">India</option>
+            <option value="">Pakistan</option>
+            <option value="">Bangladesh</option>
+            <option value="">Sri Lanka</option>
+            <option value="">Nepal</option>
+        </select>
+    </form>
+<br>
+    <div >
+          <textarea name="" id="test" cols="30" rows="10"></textarea>
+    </div>
+
+    <script>
+        function focusf(elem){
+            elem.style.background = 'aqua';
+        }
+
+        function blurf(elem){
+            elem.style.background = '';
+        }
+
+        function inputf(elem){
+            var x = elem.value;
+            document.getElementById('test').innerText = x;
+        }
+        
+    </script>
+</body>
+</html>

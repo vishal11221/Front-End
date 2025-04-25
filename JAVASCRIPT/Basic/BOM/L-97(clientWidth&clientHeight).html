@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clientHeight & clientWidth</title>
+    <style>
+        #box{
+            background-color: bisque;
+            border: 2px solid black;
+            height: 300px;
+            width: 300px;
+            padding: 12px;
+            margin: 10px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <h3>clientHeight & clientWidth</h3>
+    <p>clientHeight take internal height of your div.</p>
+    <p>clientWidth take internal width of your div.</p>
+    <div id="box">
+
+    </div>
+
+    <script>
+        var target = document.querySelector('#box');
+        var height = target.clientHeight;
+        var width  = target.clientWidth;
+
+        console.log(height);
+        console.log(width);
+    </script>
+</body>
+</html>

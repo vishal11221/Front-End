@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>screenX and screenY</title>
+</head>
+<body>
+    <p>screenX/Y gives the coordinates relative to the screen in device pixels.</p>
+
+    <script>
+       document.addEventListener('mouseover', function(e){
+              console.clear();
+              var x = e.screenX;
+              var y = e.screenY;
+
+              console.log('screenX:' + x);
+              console.log('screenY:' + y);
+       })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map method in javascript </title>
+</head>
+<body>
+    <p>Map method is used to apply some operations in your existing array and return result with new array.</p>
+
+    <script>
+        //Apply 10 multiplication in existing array.
+
+        var arr = [10,20,30,40,50];
+     
+
+        var b = arr.map(function test(x){
+            return x*10;
+        })
+        document.write(b + "<br>");
+
+        //Create Array object and print that value in new array 
+
+        var arr2 = [
+            {fname:'vishal',lname:'raj'},
+            {fname:'rohan',lname:'kumar'},
+            {fname:'sohan',lname:'prasad'}
+        ]
+
+        var result = arr2.map(function f(p){
+            return p.fname + " " +  p.lname;
+        })
+
+        document.write(result);
+    </script>
+</body>
+</html>

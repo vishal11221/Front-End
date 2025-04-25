@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function with return value</title>
+</head>
+
+<body>
+    <p>In this lecture,we calculate do operation on return value.</p>
+
+
+    <script>
+        function sum(math, chemistry, physics) {
+            result = math + chemistry + physics;
+            return result;
+        }
+
+        function percentage(tt) {
+            var per = tt / 300 * 100;
+            document.write(per);
+        }
+
+        var total = sum(78, 87, 78)
+        percentage(total);
+    </script>
+</body>
+</html>

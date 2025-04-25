@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shift & Unshift</title>
+</head>
+<body>
+
+    <p>Shift method always delete from first index.</p>
+    <p>Unshift method always add value from first index.</p>
+
+     <p>Difference between push and unshift Array method. <br> 
+        push always add value in array at last index and unshift always add value at first index.</p>
+
+     <p>Difference between pop and shift Array method. <br>
+        pop always delete value from array at last index and shift always delete value at first index.</p>
+    
+    <script>
+         var vegetable = ['Potato','Tomato','Cabbage','Radish'];
+         document.write(vegetable);//Without adding new value that one original one.
+
+        //If you want to delete value from first index then use shift method.
+        vegetable.shift();
+        document.write(vegetable);//Shift delete the value from first index.
+
+        //If you want to add value from first index then use Unshift method.
+        vegetable.unshift('Ladyfinger');
+        document.write(vegetable);
+    </script>
+</body>
+</html>

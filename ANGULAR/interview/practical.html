@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical Interview Questions</title>
+</head>
+<body>
+    <ol>
+        <li>Create Home,About,Contact and User components using angular and set it routings to navigate.(Routing)
+            <ol>Steps:- 
+                <li>Create components, home, about, contact and user</li>
+                <pre>
+                    create Components folder in src/app folder.Then create 4 components in it.
+                        <!-- first generate component  -->
+                        ng generate component home
+                        ng generate component about
+                        ng generate component contact
+                        ng generate component user
+
+                        <!-- Second set routing in app.module.ts file. -->
+                        import { NgModule } from '@angular/core';
+                        import { RouterModule, Routes } from '@angular/router';
+                        import { HomeComponent } from './Components/home/home.component';
+                        import { AboutComponent } from './Components/about/about.component';
+                        import { ContactComponent } from './Components/contact/contact.component';
+                        import { UserComponent } from './Components/user/user.component';
+              
+                        const routes: Routes = [
+                          { path: '', component: HomeComponent },
+                          { path: 'about', component: AboutComponent },
+                          { path: 'contact', component: ContactComponent },
+                          { path: 'user', component: UserComponent },
+                        ];
+              
+                        @NgModule({
+                          imports: [RouterModule.forRoot(routes)],
+                          exports: [RouterModule],
+                          declarations: [HomeComponent, AboutComponent, ContactComponent, UserComponent],
+                        })
+                        export class AppRoutingModule { }
+
+                        <!-- Third set routing in app.component.html file. -->
+                        <a routerLink="/home">Home</a>
+                        <a routerLink="/about">About</a>
+                        <a routerLink="/contact">Contact</a>
+                        <a routerLink="/user">User</a>
+                        <router-outlet></router-outlet>
+                </pre>
+            </ol>
+        </li>
+        <li>When User click on User component from Navbar then User list should be display on the screen. 
+            <pre>
+                <!-- user.component.ts -->
+                import { Component, OnInit } from '@angular/core';
+
+                @Component({
+                  selector: 'app-users',
+                  templateUrl: './users.component.html',
+                  styleUrls: ['./users.component.css'],
+                })
+                export class UsersComponent implements OnInit {
+                  users = [
+                    {
+                      name: 'vishal',
+                      role: 'Software Engineer',
+                      email: 'itsvishalraj98@gmail.com',
+                    },
+                    { name: 'rohan', role: 'Iot Engineer', email: 'rohandas08@gmail.com' },
+                    { name: 'mohan', role: 'System Engineer', email: 'mohandas88@gmail.com' },
+                  ];
+
+                  constructor() {}
+
+                  ngOnInit() {}
+                }
+
+                <!-- user.component.html -->
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Age</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let user of users">
+                      <td>{{ user.name }}</td>
+                      <td>{{ user.age }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </pre>
+        </li>
+        <li>Display the title of page using Interpolation and property binding
+          <pre>
+              <!-- user.component.html -->
+              <h1>{{ title }}</h1>
+              <h1 [innerHtml]="title"></h1>
+
+              <!-- user.component.ts -->
+              export class UsersComponent {
+                title = 'User List';
+              }
+          </pre>
+        </li>
+        <li>Create on input field, when user enter value in input field then value should be display at the bottom of screen
+          <pre>
+              <!-- contact.component.html -->
+              <input type="text" [(ngModel)]="text" />
+
+              <div class="bottomtxt">
+                <p>Value: {{ text }}</p>
+              </div>
+              
+              <!-- contact.component.css  -->
+              .bottomtxt {
+                 bottom: 0;
+                 position: fixed;
+              }
+              <!-- contact.component.ts -->
+              export class ContactComponent {
+                text = '';
+              }
+          </pre>
+        </li>
+        <li>Create a input field and submit button and when user click on submit button then value should be display at the bottom of screen and text field value should be empty.
+          <pre>
+              <!-- about.component.html -->
+              <input type="text" [(ngModel)]="InputTxt" />
+              <button (click)="displayValue()">Submit</button>
+
+              <div class="bottomtxt" *ngIf="displayTxt">
+                <p>Value: {{ displayTxt }}</p>
+              </div>
+              
+              <!-- about.component.css  -->
+              .bottomtxt {
+                 bottom: 0;
+                 position: fixed;
+              }
+              <!-- about.component.ts -->
+              export class AboutComponent {
+                InputTxt: string = '';
+                displayTxt: string = '';
+
+                displayValue() {  
+                  this.displayTxt = inputTxt;
+                  this.InputTxt = '';
+                }
+              }
+          </pre>
+        </li>
+        <li>Create a form and bind it with user component.
+            <pre>
+                <!-- user.component.html -->
+                <form [formGroup]="userForm">
+                  <label for="name">Name:</label>
+                  <input type="text" id="name" formControlName="name" />
+                  <label for="age">Age:</label>
+                  <input type="number" id="age" formControlName="age" />
+                </form>
+            </pre>
+
+            <pre>
+                <!-- user.component.ts -->
+                import { Component, OnInit } from '@angular/core';
+                import { FormControl, FormGroup } from '@angular/forms';
+
+                @Component({
+                  selector: 'app-users',
+                  templateUrl: './users.component.html',
+                  styleUrls: ['./users.component.css'],
+                })
+                export class UsersComponent implements OnInit {
+                  userForm = new FormGroup({
+                    name: new FormControl(''),
+                    age: new FormControl(''),
+                  });
+
+                  constructor() {}
+
+                  ngOnInit() {}
+                }
+            </pre>
+        </li>
+    </ol>
+</body>
+</html>

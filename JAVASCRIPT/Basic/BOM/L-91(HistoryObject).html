@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History Object(Back & Forward)</title>
+</head>
+<body>
+    <button onclick="Back()">
+        Back
+    </button>
+    
+    <button onclick="Forward()">
+        Forward
+    </button>
+
+    <button onclick="Go()">
+        Go
+    </button>
+
+    <script>
+        function Back(){
+            history.back();
+        }
+
+        function Forward(){
+            history.forward();
+        }
+
+        function Go(){
+            history.go(-1);
+        }
+    </script>
+
+    <p>back():-Back method just move into previous page.</p>
+    <p>forward():-Forward method just move into next page.</p>
+    <p>go():-it tell the page where to go,forward or backward,postive value told to go forward and negative value told to go backward.</p>
+</body>
+</html>

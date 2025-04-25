@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Methods</title>
+</head>
+<body>
+    
+    <ol>
+        <li>ceil(x):-It always return upper value,like if you give 1.5 then it return 2,if you give 2.4 then it return 3.</li>
+        <li>floor(x):-It always return downward value,like if you give 1.5 then it return 1,if you give 2.4 then it return 2 only.</li>
+        <li>round(x):-It always round nearest value,like if you give 0.65 then it return 1,if you give 1.4 then it return 1.</li>
+        <li>trunc(x):-Trunc simply take integer value and return if you give 8.19 then it return 8, it not take after decimal value.</li>
+        <li>max(x,y....n):-It always return maximum value from following given value.</li>
+        <li>min(x,y....n):-It always return minimum value from following given value.</li>
+        <li>sqrt(x):-It return square root of given value.</li>
+        <li>cbrt(x):-It return cube root of given value.</li>
+        <li>pow(x,y):-Powerof calculate power of given no,in this you pass two parameter.if you give 4,3 then it return 64 because 4 to the power 3 is 64.</li>
+        <li>random():-It return random value from your given range value.Like you give 1 to 10 then it return random value from 1 to 10.</li>
+        <li>abs():-It always return absolute value,if you give positive or negative value.</li>
+        <li>PI:-It always return 22/7 or 3.14</li>
+    </ol>
+
+    <p>Note:-Every math method used Math before you use.</p>
+
+    <script>
+        //ceil method
+        var a = Math.ceil(4.3);
+        document.write(a + "<br>");//it always return upper nearest round value.
+
+       //floor method
+       var x = Math.floor(4.7);
+       document.write(x + "<br>");//it always return downward nearest round value.
+
+       //round method
+       var p = Math.round(2.49);
+       document.write(p + "<br>");//it round the nearest round value.
+
+        //trunc method
+        var p1 = Math.trunc(4.9);
+       document.write(p1 + "<br>");//it not take after decimal value it only take before decimal value.
+
+       //max method
+       var t = Math.max(8,12,3,4,19);
+       document.write(t + "<br>");//it return 19 because 19 is the highest value in the given no
+
+       //min method
+       var y = Math.min(8,12,3,4,19);
+       document.write(y + "<br>");//it return 3 because 3 is the minimum value in the given no.
+
+        //sqrt method
+        var s = Math.sqrt(49);
+       document.write(s +"<br>");//it return 7 because square of 49 is 7.
+
+       //cbrt method
+       var c = Math.cbrt(125);
+       document.write(c + "<br>");//it return 5 because cubic root of 125 is 5.
+
+       //pow method
+       var p2 = Math.pow(4,3);
+       document.write(p2 + "<br>");//it return 4 to the power 3 that means 64.
+
+        //random method
+        var h1 = Math.random();
+       document.write(h1 + "<br>");//it return the random value when you refresh your browser
+
+       //write a program to print the 1 to 10 random value when we refresh the page.
+       var l1 = Math.floor(Math.random()*10) + 1;
+       document.write(l1 + "<br>");
+
+       var g = Math.PI;
+       document.write(g);//it return 3.14 because the value of PI is 3.14 that is constant value it never change
+
+    </script>
+</body>
+</html>

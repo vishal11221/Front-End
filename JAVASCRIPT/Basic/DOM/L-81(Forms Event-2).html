@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms Event(change,select,submit,invalid)</title>
+    <style>
+        #test{
+            border: 1px solid black;
+            background-color: goldenrod;
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="test">
+
+    </div>
+    <button onclick="stopAnim()">Stop Animation</button>
+
+    <form action="" onsubmit="submitf()">
+        <label for="">Name</label> <input type="text" id="fname" value="" onselect="selectf()" required  oninvalid="alert('Please fill your name')"> <br> <br>
+        <label for="">Class</label> <input type="text" > <br> <br>
+         
+        <label>Choose your car</label>
+        <select name="" id="" onchange="changef(this)">
+            <option value="Maruti">Maruti</option>
+            <option value="Hyundai">Hyundai</option>
+            <option value="Porsche">Porsche</option>
+            <option value="Mahindra">Mahindra</option>
+        </select>
+        <input type="submit">
+    </form>
+    <div>
+        <textarea name="" cols="30" rows="10" id="txt"></textarea>
+    </div>
+
+    <script>
+        function changef(elem){
+           var x = elem.value;
+           document.getElementById('txt').innerHTML = x;
+        }
+
+        function selectf(){
+            console.log('You successfully selected');
+        }
+
+        function submitf(){
+
+           var x = document.getElementById('fname').value;
+           alert("Hello"  + " " + x);
+        }
+    </script>
+     <button onclick="windowf()">
+        Open
+     </button>
+     <button onclick="closeWindow()">Close</button>
+     <button onclick="moveWin()">Move</button>
+
+     <script>
+        var mywindow;
+        function windowf(){
+          mywindow =  window.open('https:google.com','_blank',"width=500px,height=500px");
+        }
+
+        function closeWindow(){
+            mywindow.close();
+        }
+
+        function moveWin(){
+            mywindow.moveTo(450,450);
+        }
+
+     </script>
+    
+    <p>Difference between oninput and onchange event ? <br>
+       oninput event happen when we input something in that area but onchange event happen when we loose focus from that area or when we click on outside then it happen.For example we have input field in that we write text,when we write text in input field at a time value print in screen, same as at the time of onchange when we write text in input field then value will not print on the screen at a time when we click on outside input field then value print.</p>
+</body>
+</html>

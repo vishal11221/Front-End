@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key(ctrlKey,AltKey,shiftKey,Metakey)</title>
+    <style>
+        #box{
+            border: 1px solid black;
+            background-color: lightcyan;
+            height: 460px;
+            width: 460px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+
+    </div>
+    
+
+
+    <script>
+          var target = document.querySelector('#box');
+          target.addEventListener('click', function(event){
+             var ctrl   =   event.ctrlKey;
+             var shift  =  event.shiftKey;
+             var alt    =   event.altKey;
+             var winkey = event.metaKey;
+            //   if(ctrl){
+            //     console.log('You successfully click control key');
+            //   }else{
+            //     console.log('You not press control key');
+            //   }
+
+            //   if(shift){
+            //     console.log('You successfully click shift key');
+            //   }else{
+            //     console.log('You not press shift key');
+            //   }
+
+            //   if(alt){
+            //     console.log('You successfully click Alt key');
+            //   }else{
+            //     console.log('You not press Alt key');
+            //   }
+
+              if(winkey){
+                console.log('You successfully click window key');
+              }else{
+                console.log('You not press window key');
+              }
+          });
+    </script>
+</body>
+</html>

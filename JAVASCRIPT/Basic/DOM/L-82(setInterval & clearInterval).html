@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval & clearInterval</title>
+    <style>
+        #test{
+            border: 1px solid black;
+            height: 20px;
+            width: 24px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="test">
+
+    </div>
+    <p>setInterval:-When user apply some control on your program then we use setInterval like we want our function call after 2 second or at specific time then it we use setInterval.</p>
+    <p>clearInterval:-It clear your setInterval control or your function run at a time.</p>
+
+    <script>
+        var a = 0;
+        var id = setInterval(Anim,10);
+       
+
+        function Anim(){
+            a = a + 10;
+            if(a == 300){
+                clearInterval(id);
+            }
+            var target = document.getElementById('test');
+            target.style.marginLeft = a + 'px';
+        }
+    </script>
+</body>
+</html>

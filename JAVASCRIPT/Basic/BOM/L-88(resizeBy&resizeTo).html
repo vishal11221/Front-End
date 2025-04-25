@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resizeBy & resizeTo</title>
+</head>
+<body>
+    <button  onclick="openWin()">Open Window</button>
+    <button onclick="resizeWin()">Resize Window</button>
+
+    <script>
+        var mywindow;
+        function openWin(){
+           mywindow.open("width=200px, height=200px")
+        }
+
+        function resizeWin(){
+            mywindow.resizeTo(400,400);
+            // mywindow.resizeBy(400,400);
+        }
+    </script>
+
+    <p>resizeBy and resizeTo, resizeTo method resize your orginal window to specific position that you given. resizeBy method add new value at your given position that means you give 150px and 150px to your window with resizeTo method , when you apply 200px height and width 200px then the original window of that window is 350px because resizeBy add with old value.</p>
+</body>
+</html>

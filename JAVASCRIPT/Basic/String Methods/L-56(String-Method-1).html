@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods(length,lowercase,uppercase,includes,startsWith,endsWith,search,match,indexOf,lastIndexOf,replace,trim)</title>
+</head>
+<body>
+    <p>length is not a method in javascript,it is a property that find the length of your array and string value,it count space also.</p>
+    <p>lowercase is string method that is used to show your existing string value into small letter only.</p>
+    <p>uppercase is string method that is used to show your existing string value into capital letter only.</p>
+    <p>includes method is string method that is used to find data from your existing string,if data match then it return true otherwise false.it is case sensitive.</p>
+    <p>startsWith method is string method that is used to find data from first index,if data match then it return true otherwise false.It is also case sensitive.</p>
+    <p>endsWith method is string method that is use to find data from lastindex,if data match then it return true otherwise false.It is also case sensitive.</p>
+    <p>search method also works like includes method that means it also find the data from existing string but it return index value.if data is not there then it return -1.</p>
+    <p>match method is used to find the value from existing string and return new array.We match the value inside double slace.</p>
+    <p>indexOf method search the value from first index and return the index no if value find successfully.</p>
+    <p>lastIndexOf method search the value from last index and return the last index no if value find successfully.</p>
+    <p>replace method is used to replace the existing value and set new value,in this we pass two parameter first is old value and second is new value.</p>
+    <p>trim method is used to remove extra spaces from your existing string.Basically it is used in html form of input field to remove extra spaces.</p>
+
+    <script>
+    //WAP to find the length of an array.
+        var arr = ['vishal','rohan','mohan',83.5,71,0.3];
+        var b = arr.length;
+        document.write(b);
+
+    //WAP to find the length of given string.
+        var str = "Javascript is no1 language now ";
+        var len =  str.length;
+        console.log(len);
+
+    //WAP to convert the given string into lowercase.
+        var str2 = 'Javascript Is The Best Language';
+        var lwr = str2.toLowerCase();
+        console.log(lwr);
+
+    //WAP to convert the given string into uppercase.
+        var str3 = 'javascript is client and browser side language';
+        var upr = str3.toLocaleUpperCase();
+        console.log(upr);
+
+    //WAP to find the data from existing string.
+        var str4 = 'Nodejs is backend language';
+        var find = str4.includes('Backend');
+        console.log(find);
+
+    //WAP to find the data of first index from existing string.
+        var str5 = 'Python is a backend language';
+        var startingWord = str5.startsWith('python');
+        console.log(startingWord);
+
+    //WAP to find the data of last index from  existing string.
+         var st6 = 'Nodejs is also a backend language';
+         var endsWord = st6.endsWith('Age');
+         console.log(endsWord);
+
+    //WAP to find the data from existing string with the help of javascript search method.
+        var str7 = 'sql is database language';
+        // var srch = str7.search('language');
+        var srch = str7.search('are');
+        console.log(srch);
+
+    //WAP to match the data from existing string with the help of match method.
+       var str8 = 'HTML is a hypertext markup language is';
+       var match = str8.match(/is/g);
+       console.log(match);
+
+    //WAP to find the data from existing string with the help of indexOf method.
+       var str9 = 'CSS is used for is styling';
+       var res = str9.indexOf('is');
+       console.log(res);
+
+    //WAP to find the data from existing string with the help of lastIndexOf method.
+       var str10 = 'CSS is used for is styling';
+       var res2 = str9.lastIndexOf('is');
+       console.log(res2);
+
+    //WAP to replace java to javascript from existing string with the help of replace method.
+       var str11 = 'Java is great language now a days';
+       var rep = str11.replace(/Java/g,'Javascript');
+       console.log(rep);
+
+    //WAP to remove extra spaces from existing string.
+       var str12 = '     Mysql    ';
+       var trm = str12.trim();
+       console.log(trm);
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Const Var with Array & Object</title>
+</head>
+<body>
+    
+    <p>We cannot assign new value in const array but with the help of array index,we update the value.</p>
+    <p>We change the object value in const object with the help of property.value</p>
+
+
+    <script>
+      const arr = ['rohan','sohan','mohan'];
+    //   arr = ['ram','shyam','karan']; we cannot update const array value,we update the const array value with their index no as:-
+    arr[1] = 'pankaj';
+      console.log(arr);
+    </script>
+
+    <script>
+        const obj = {
+            name: 'vishal',
+            course: 'mca',
+            contact: 8809739667
+        }
+
+        obj.contact = 7004364947; // we update the const object value with their property value.
+
+        // obj = {
+        //     name: 'rohan',
+        //     course: 'b.tech',
+        //     contact: 99087665577
+        // } // we cannot update the const object value.
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Traversal</title>
+    <link rel="stylesheet" href="Traversal.css" />
+  </head>
+  <body>
+      <div id="Outer">
+        <h3>Outer</h3>
+        <div id="Inner">
+          <h3>Inner</h3>
+            <div>A</div>
+            <div>B</div>
+            <div id="child-c">C</div>
+            <div>D</div>
+            <div>E</div> 
+        </div>
+      </div>
+    </div>
+
+    
+    <script>
+      //How to find the Inner div of parentElement
+        // var elem = document.getElementById("Inner").parentElement;
+       // console.log(elem);
+      
+    //How to find the html of Inner div
+      //  var elem = document.getElementById("Inner").parentElement.innerHTML;
+      //  console.log(elem);
+
+    // var elem = document.getElementById("Inner").parentNode;
+    // console.log(elem);
+
+      //Target all children of Inner div.
+         //  var element = document.getElementById("Inner").children;
+         //  console.log(element);
+     
+      //Target first index child only:- 
+         //  var element = document.getElementById("Inner").children[1];
+         //  console.log(element);
+      
+      //How to style first index child:-
+        // document.getElementById("Inner").children[1].style.backgroundColor = 'red';
+
+      //How to get innerHtml of first index child
+        // var elem = document.getElementById("Inner").children[1].innerHTML;
+        // console.log(elem);
+      
+        // var elem = document.getElementById("Inner").childNodes[1];
+        // console.log(elem);
+
+       //How to check the firstElement from particular div
+        //  var elem = document.getElementById("Inner").firstElementChild;
+        //  console.log(elem);
+    
+        //How to find the innerHTML from particular div
+          // var elem = document.getElementById("Inner").firstElementChild.innerHTML;
+          // console.log(elem);
+
+        //How to apply style on a particular div with the help of firstElementChild
+          // document.getElementById("Inner").firstElementChild.style.backgroundColor = 'aqua';
+
+        //How to target lastElementChild 
+        // var elem = document.getElementById("Inner").lastElementChild;
+        // console.log(elem);
+        
+        //How to change the backgroundcolor of Inner div of lastchild.
+          // document.getElementById("Inner").lastElementChild.style.backgroundColor = 'orange';
+        
+        //Find the lastchild of Inner div.
+           // var elem = document.getElementById("Inner").lastChild;
+          // console.log(elem);
+          
+       //How to find the next tag of div c 
+          // var elem = document.getElementById("child-c").nextElementSibling;
+          // console.log(elem);
+
+       //How to find the innerHtml of next tag of child-c 
+          //  var elem = document.getElementById("child-c").nextElementSibling.innerHTML;
+          //  console.log(elem);
+       
+      //How to style next tag of child-c 
+           document.getElementById("child-c").nextElementSibling.style.background = 'red';
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Append Method</title>
+</head>
+<body>
+    <div id="test">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui corporis voluptatum et minus? Blanditiis.</p>
+        <span>This is span</span>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat exercitationem ullam rem.
+        </p>
+    </div>
+    <ol>
+        <li>appendChild:-With the help of appendChild method we append text into tag.</li>
+        <li>insertBefore:-With the help of insertBefore method we insert your new tag where we want,in this we pass two parameter,first what you insert and second is from which tag you insert before.</li>
+    </ol>
+
+    <script>
+        var tag = document.createElement('p');//it create p tag
+        var txt = document.createTextNode('This is my first paragraph');//it create paragraph
+        tag.appendChild(txt);//it append text into p tag.
+        console.log(tag);//Now it print p tag with their text.
+        
+        //How to add this tag in particular div and display it in screen.
+        document.getElementById('test').appendChild(tag);
+       
+        //How to insert our new p tag just before span tag.
+        var target = document.getElementById('test');
+        target.insertBefore(tag,target.children[1]);
+    </script>
+</body>
+</html>

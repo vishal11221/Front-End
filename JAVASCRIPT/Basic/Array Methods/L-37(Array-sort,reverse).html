@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Sort & Reverse</title>
+</head>
+<body>
+
+    <p>The sort() method sorts the elements as strings in alphabetical and ascending order.</p>
+    <p>The Reverse method can be used to reverse a jagged array.</p>
+    
+    <script>
+       var arr = [9,81,77,90,8,12];
+       arr.sort();
+
+       arr.forEach(arr => {
+        console.log(arr);
+        
+       });
+
+       //Sorting a given Numeric Array value in Ascending order & Print the Array value with the help of ForEach loop.
+       var arr2 = [9,81,61,5,44,90,77,63];
+        
+        arr2.sort(function(a,b){
+            return a - b ;
+
+        })
+
+        arr2.forEach(arr2 => {
+            console.log(arr2);
+        })
+
+//Sorting a given Numeric Array value in Descending order & Print the Array value with the help of ForEach loop.
+
+var arr3 = [19,9,81,4,31,20,13];
+
+arr3.sort(function(x,y){
+   return y- x ;
+
+})
+
+arr3.forEach(arr3 => {
+   console.log(arr3)
+})
+
+//Reverse the given array string value and Print that value.
+
+var arr4 = ['Rohan','Sohan','Mohan','Vohan'];
+
+arr4.reverse();
+
+console.log(arr4);
+
+//Sort the given array string value in descending order  and Print the value.
+
+var arr5 = ['pankaj','sankaj','rankaj','tankaj'];
+arr5.sort().reverse();
+
+arr5.forEach(arr5 => {
+    console.log(arr5);
+})
+       
+    </script>
+</body>
+</html>

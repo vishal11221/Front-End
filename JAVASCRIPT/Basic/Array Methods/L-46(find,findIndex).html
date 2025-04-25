@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>find & findIndex array method</title>
+  </head>
+  <body>
+    <p>
+      Find check the value from starting index only,if value exist then it return
+      the value but condition is that it check from first index, if first index
+      value match then it return that value,if value not match then it return
+      undefined.
+    </p>
+
+    <script>
+      var arr2 = [10, 13, 16, 14];
+
+      var result = arr2.find(checkAdult);
+      console.log(result);
+
+      function checkAdult(age) {
+        return age >= 18;
+      }
+      //it return 23 because,find check from first index and in first index greater than 28 value is not there so it goes to second index and in second index greater than 18 is there so it return 23 and leave all value.
+
+      var arr3 = [12, 23, 14, 26];
+
+      var result2 = arr3.findIndex(checkAdult);
+      console.log(result2);
+
+      function checkAdult(age2) {
+        return age2 >= 18;
+      }
+      //It return 1,because 23 available on first index and that condition statisfied on 23 only so it return that index value.
+
+      //Note:-The main difference between find & findIndex is that find return the value,if the value match from starting index and findIndex return index no if value match from starting index.
+    </script>
+  </body>
+</html>

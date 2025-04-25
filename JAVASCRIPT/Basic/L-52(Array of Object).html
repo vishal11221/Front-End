@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array of Object</title>
+</head>
+<body>
+    <p>Array of Object that means,we define object in Array.</p>
+
+    <script>
+        var arrObj = [
+            {name:'vishal',course:'mca',contact:8809739667,marks:83.5},
+            {name:'rohan',course:'bca',contact:7004364947,marks:78.7},
+            {name:'pankaj',course:'b.tech',contact:5600768102,marks:67.9}
+        ];
+
+        for (const key in arrObj) {
+            console.log(arrObj[key].name + " " + arrObj[key].course + " " +  arrObj[key].contact + " " + arrObj[key].marks);
+        }
+    </script>
+</body>
+</html>

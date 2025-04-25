@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Topices for Interview</title>
+</head>
+<body>
+    <ol>
+        <li>Javascript is a Client Side Scripting Language. It is used to create dynamic and interactive web pages.</li>
+        <li>Javascript is cross-platform language. It can be used in any platform.</li>
+
+        <li>Datatype in Javascript:- String, Number, Boolean, Null, Undefined</li>
+
+        <li>Difference between Null and Undefined:- Null is a value, Undefined is a variable. For example:- When we declare a variable but not assign any value to it then it is undefined. When we assign null to it then it is null.</li>
+
+        <li>var,let,const are special keywords used to declare variables — they are not variables themselves.</li>
+
+        <li>Difference between var, let and const:- var can be updated and re-declared , Is function-scoped, not block-scoped. let can be updated but not re-declared , Is block-scoped. const cannot be updated or re-declared , Is block-scoped.</li>
+
+        <li>Difference between Function Scope and Block Scope ? 
+            Function declare with their function name and the variable inside a function declare it scope or access within a function not outside of function that declare with var keyword. Block declare with curly braces and the variable inside a block declare it scope or access within a block not outside of block that declare with let or const keyword.
+        </li>
+
+        <li>Local & Global Scope:- Local scope is a variable that is declared inside a function. Global scope is a variable that is declared outside a function.</li>
+
+        <li>Function Scope:- Function scope is a variable that is declared inside a function that declare with var keyword.</li>
+
+        <li>Block Scope:- Block scope is a variable that is declared inside a block of code.</li>
+
+        <li>Difference between == and === :- == checks only value. === checks value and datatype. for example:- var x = 5; var y = "5"; console.log(x == y); console.log(x === y);</li>
+
+        <li>What is "this" operator in Javascript:- This operator is used to access the current object. for example:- var obj = {fname: "John",lname: "Doe" ,age: 30 , fullname: function() { return this.fname + " " + this.lname;}}; console.log(obj.fullname());</li>
+
+        <li>What is ternary operator in Javascript:- Ternary operator is used to check a condition like if else. for example:- var x = 5; var y = 10; var result = x > 10 ? "Greater" : "Lesser";</li>
+
+        <li>What is closure in Javascript:- Closures allow inner functions to access variables from their outer function scope, even after the outer function has returned. Closures are created when a function returns a function. for example:- function outerFunction() {
+            var x = 5;
+            y = 10; // Still global (intentionally left as-is to match original)
+          
+            function innerFunction() {
+              return x + y;
+            }
+          
+            // Return the inner function
+            return innerFunction;
+          }
+          
+          var result = outerFunction(); // Call outer and store the inner function
+          console.log(result()); // Output: 15
+           </li>
+
+        <li>What is hoisting in Javascript:- Hoisting is a JavaScript mechanism where variables and functions are moved to the top of their scope before code execution. for example:- 
+            <ul>
+                <li>console.log(a); // Output: undefined</li>
+                <li>var a = 5;</li>
+                <li>var b; console.log(b); // Output: undefined </li>
+                <li>b = 10;</li>
+                <li>sayHello(); function sayHello() { console.log("Hello!"); }</li>
+           </ul> 
+        </li>
+
+        <li>What is prototype in Javascript:- Prototype is a JavaScript object that is used to add properties and methods to other objects.
+            Ex:- function Person(name, age) {
+                this.name = name;
+                this.age = age;
+              }
+              
+              Person.prototype.sayHello = function() {
+                console.log("Hello, my name is " + this.name + " and I am " + this.age + " years old.");
+              };
+              
+              var person1 = new Person("John", 30);
+              person1.sayHello(); // Output: Hello, my name is John and I am 30 years old.
+        </li>
+
+        <li>What is setTimeout and setInterval in JavaScript:- setTimeout() is a JavaScript function that executes a specified function once after a given delay (in milliseconds). setInterval() is a JavaScript function that repeatedly executes a specified function at fixed time intervals (in milliseconds) until it is stopped using clearInterval().
+            Ex:- console.log("Start");
+            setTimeout(function() {
+              console.log("Executed after 2 seconds");
+            }, 2000);
+            
+            console.log("End");
+            
+            Ex:- let count = 0;
+            const intervalId = setInterval(function() {
+              count++;
+              console.log("Count:", count);
+            
+              // Stop the interval after it reaches 5
+              if (count === 5) {
+                clearInterval(intervalId);
+                console.log("Interval stopped");
+              }
+            }, 1000);</li>
+
+        <li>What is Promise in JavaScript:- Promise is a JavaScript object that allows you to handle the success and failure of an asynchronous operation.
+            Ex:- // Create a new promise
+            let myPromise = new Promise((resolve, reject) => {
+              let success = true;
+            
+              if (success) {
+                resolve("The operation was successful!");
+              } else {
+                reject("The operation failed.");
+              }
+            });
+            
+            // Use the promise
+            myPromise
+              .then((message) => {
+                console.log("Success:", message);
+              })
+              .catch((error) => {
+                console.log("Error:", error);
+              });
+        </li>
+        <li>What is the difference between document.getElementById() and querySelector():-</li>
+
+        <li>Difference between asynchronous and synchronous:- In synchronous execution, tasks are completed one at a time in a single sequence. The code runs from top to bottom, with each line waiting for the previous one to complete before moving on. Each task blocks the next one until it finishes. In asynchronous execution, tasks are executed concurrently, allowing multiple tasks to run in parallel.
+            // Example of synchronous execution
+            console.log("Task 1");
+            console.log("Task 2");
+            console.log("Task 3");
+            
+            // Example of asynchronous execution
+            console.log("Task 1");
+            setTimeout(() => {
+              console.log("Task 2");
+            }, 1000);
+            console.log("Task 3");
+            // Output: Task 1, Task 3, Task 2
+            //Note:- In asynchronous code,some tasks like setTimeout,API calls,promises are delayed and other code continues running without waiting for them.   
+        </li>
+
+        <li>What is callback in JavaScript:- Callback is a function that is passed as an argument to another function and is executed after the completion of that function. 
+         // Example of a callback function
+            function greet(name) {
+                console.log(`Hello, ${name}!`);
+            }
+            
+            function sayHello(callback, name) {
+                callback(name);
+            }
+            
+            sayHello(greet, "John");
+            // Output: Hello, John!</li>
+
+        <li>What is IIFE in JavaScript:- IIFE is an Immediately Invoked Function Expression, which is a self-executing function.
+        // Example of an Immediately Invoked Function Expression (IIFE)
+            (function() {
+                console.log("This code is executed immediately");
+            })();
+            
+            // function expression
+            var result = (function() {
+                return "This code is executed immediately";
+            })();
+            console.log(result);</li>
+
+        <li>What is arrow function ? How it differ from regular function:- Arrow function is a function that is defined using the => operator. It is a shorter way to write a function. for example:- var add = (a, b) => a + b; var multiply = (a, b) => a * b; console.log(add(2, 3)); console.log(multiply(2, 3));</li>
+        <li>Note:- If we have single parameter and single statement then no need of round and curly braces, we can write it like this:- var add = a => a + 5; in a single line.</li>
+    </ol>
+
+    <script>
+         // Reverse a string
+         function reverse(str) {
+            return str.split("").reverse().join("");
+        }
+        console.log(reverse("Hello"));
+        
+        // Write a function to check if a string is palindrome or not.
+        function palindrome(str) {
+            return str === str.split("").reverse().join("");
+        }
+        console.log(palindrome("racecar"));
+
+        // Write a function to find fabonacci series.
+        function fibonacci(n) {
+            let a = 0, b = 1;
+            for(let i = 2; i <= n; i++) {
+                let temp = a + b;
+                a = b;
+                b = temp;
+            }
+            return b;
+            }
+        console.log(fibonacci(5));
+
+         // Write a function to find factorial of a number.
+         function factorial(n) {
+            if (n === 0) {
+                return 1;
+            }
+            return n * factorial(n - 1);
+        }
+        console.log(factorial(5));
+
+         // Write a function to find even numbers from the given array.
+         function even(arr) {
+            return arr.filter(num => num % 2 === 0);
+        }
+        console.log(even([1, 2, 3, 4, 5]));
+
+        // Write a function that takes an array of numbers as an argument and returns a new array with only the odd numbers.
+        function odd(arr) {
+            return arr.filter(num => num % 2 !== 0);
+        }
+        console.log(odd([1, 2, 3, 4, 5]));
+
+        // Write a function to find prime no in an array of numbers.
+        function prime(arr) {
+            return arr.filter(num => {
+                for (let i = 2; i <= Math.sqrt(num); i++) {
+                    if (num % i === 0) {
+                        return false;
+                    }
+                }
+                return true;
+            });
+        }
+        console.log(prime([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+
+        // Write a function that find the largest number in an array of numbers.
+        function max(arr) {
+            return Math.max(...arr);
+        }
+        console.log(max([1, 2, 3, 4, 5]));
+
+        // Write a function that find the smallest number in an array of numbers.
+        function min(arr) {
+            return Math.min(...arr);
+        }
+        console.log(min([1, 2, 3, 4, 5]));
+
+        // Write a function that takes two numbers as arguments and returns the sum of those numbers.
+        function sum(a, b) {
+            return a + b; 
+        }
+        console.log(sum(5, 10));
+
+        // Write a function that takes a string as an argument and returns the length of that string.
+        function length(str) {
+            return str.length;
+        }
+        console.log(length("Hello"));
+
+        // Write a function that takes an array as an argument and returns the last element of that array.
+        function last(arr) {
+            return arr[arr.length - 1];
+        }
+        console.log(last([1, 2, 3, 4, 5]));
+
+        // Write a function that takes an array as an argument and returns the first element of that array.
+        function first(arr) {
+            return arr[0];
+        }
+        console.log(first([1, 2, 3, 4, 5]));
+
+        // Write a function to insert an element at last inded using push method.
+        function insert(arr, element) {
+            arr.push(element);
+            return arr; 
+        }
+        console.log(insert([1, 2, 3, 4, 5], 6));
+
+        // Write a function to insert an element at first inded using unshift method.
+        function insertFirst(arr, element) {
+            arr.unshift(element);
+            return arr; 
+        }
+        console.log(insertFirst([1, 2, 3, 4, 5], 0));
+
+        // Write a function to remove an element at last inded using pop method.
+        function removeLast(arr) {
+            arr.pop();
+            return arr; 
+        }
+        console.log(removeLast([1, 2, 3, 4, 5]));
+
+        // Write a function to remove an element at first inded using shift method.
+        function removeFirst(arr) {
+            arr.shift();
+            return arr; 
+        }
+        console.log(removeFirst([1, 2, 3, 4, 5]));
+
+        // Write a function that Remove Duplicate from an array of numbers.
+        function unique(arr) {
+            return Array.from(new Set(arr));
+        }
+        console.log(unique([1, 2, 3, 4, 5, 1, 2, 3, 4, 5]));
+
+        // Write a function that find sum of all number in an array of numbers.
+        function sum(arr) {
+            return arr.reduce((a, b) => a + b);
+        }
+        console.log(sum([1, 2, 3, 4, 5]));
+        
+         // Write a function that takes an array of numbers as an argument and returns the average of those numbers.
+         function average(arr) {
+            return arr.reduce((a, b) => a + b) / arr.length;
+        }
+        console.log(average([1, 2, 3, 4, 5]));
+
+        // Write a function that Count the occurrence of each number in an array of numbers.
+        function count(arr) {
+            return arr.reduce((a, b) => {
+                a[b] = (a[b] || 0) + 1;
+                return a;
+            }, {});
+        }
+        console.log(count([1, 2, 3, 4, 5, 1, 2, 3, 4, 5]));
+
+        // Write a function that Count the occurrence of each character in string.
+        function count(str) {
+            return str.split("").reduce((a, b) => {
+                a[b] = (a[b] || 0) + 1;
+                return a;
+            }, {});
+        }
+        console.log(count("Hello"));
+
+        // write a function that count the vowels in a string in upper and lower case.
+        function countVowels(str) {
+            const vowels = "aeiouAEIOU";
+            return str.split("").reduce((a, b) => {
+                if (vowels.includes(b)) {
+                    a[b] = (a[b] || 0) + 1;
+                }
+                return a;
+            }, {});
+        }
+        console.log(countVowels("Hello"));
+    </script>
+</body>
+</html>

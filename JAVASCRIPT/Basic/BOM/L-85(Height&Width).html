@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Height and Width</title>
+</head>
+<body onresize="resizef()">
+    <ol>We achieve the Window Height and Width with:-
+        <li>innerHeight:-innerHeight is a screen height only.</li>
+        <li>innerWidth:-innerWidth is a screen width only.</li>
+        <li>outerHeight:-outerHeight is a full browser height.</li>
+        <li>outerWidth:-outerWidth is a full browser width.</li>
+    </ol>
+
+    <script>
+         function resizef(){
+            console.clear();
+            var iWidth = window.innerWidth;
+            console.log('Inner width is: ' + iWidth)
+
+            var oWidth = window.outerWidth;
+            console.log('Outer width is:' + oWidth);
+        }
+
+        var iHeight = window.innerHeight;
+        console.log('Inner Height: ' + iHeight);
+
+        var oHeight = window.outerHeight;
+        console.log('Outer Height: ' + oHeight);
+        
+        var iHeight = window.innerHeight;
+        console.log(iHeight);
+
+        var oHeight = window.outerHeight;
+        console.log(oHeight);
+        
+    </script>
+</body>
+</html>

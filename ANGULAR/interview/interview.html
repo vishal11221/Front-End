@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular Interview Questions</title>
+</head>
+<body>
+    <ol>
+        <li>Introduce Yourself
+            <ol>
+                <li>Introduce yourselef:- My self vishal raj, i done my graduation(MCA) from Graphic Era University Dehradun. Currently i am working in REConnect Energy Solution limited as a software Enginner.My Role and responsibility to design and develop web pages using HTML, CSS, BOOTSTRAP, JAVASCRIPT,Angular,Git and bitbucket i used with team.</li>
+            </ol>
+        </li>
+        <li>What is Angular?
+            <ol>
+                <li>Angular is a framework for building single page applications using HTML, CSS and TypeScript.</li>
+                <li>Angular is a TypeScript-based open-source front-end web application framework developed and maintained by Google.</li>
+            </ol>
+        </li>
+        <li>What is framework:- A framework is a set of pre-written code that provides a basic structure and functionality for a software project.</li>
+        <li>How Angular is different from other frameworks like React or Vue?
+            <ol>
+                <li>Angular is a framework while react is js library, and vue is framework.</li>
+                <li>Angular have built in routing, which is not present in react and vue they use external libraries</li>
+                <li>Angular have many built in tools like forms and http services making it ideal for large-scale enterprise apps.</li>
+            </ol>
+        </li>
+        <li>The latest stable version of Angular is v19.2.7, released on April 16, 2025.</li>
+        <li>Feature of Angular:- 
+            <ol>
+                <li>Directives</li>
+                <li>Pipes</li>
+                <li>Routing</li>
+                <li>Data Binding</li>
+                <li>Dependency Injection</li>
+                <li>Services</li>
+                <li>Note:-In new version app.module.ts remove app.routing.ts added,so all component file used only their own ts no need module.ts and routing set in app.routing.ts</li>
+            </ol>
+        </li>
+        <li>What is standalone component
+            <ol>
+                <li>Standalone component is a component that is not part of any module and can be used in multiple modules.</li>
+                <li>For example:- </li>
+                <pre>
+                    @Component({
+                      selector: 'app-demo',
+                      standalone: true,
+                      template: `<p>This is a standalone component!</p>`,
+                    })
+                    export class DemoComponent {}
+                </pre>
+                <li>You can import this component directly in a route like this:</li>
+                <pre>
+                    const routes: Routes = [
+                    { path: 'demo', component: DemoComponent }
+                    ];
+                </pre>
+            </ol>
+        </li>
+        <li>What are the new things that we use in Angular new version.
+            <ol>
+                <li>
+                    (standalone,strict mode,pipes,Directives)
+                </li>
+            </ol>
+        </li>
+        <li>Difference between Component and Directive
+            <ol>
+                <li>A Component is a type of directive with a template. Components are used to create views and handle user interactions.</li>
+                <li>A Directive, on the other hand, does not have its own template. It is used to add behavior or modify the DOM of existing elements.</li>
+            </ol>
+        </li>
+        <li>Difference between Structural Directive and Attribute Directive
+            <ol>
+                <li>Structural directives modify the structure of the DOM using *ngIf, *ngFor</li>
+                <li>Attribute directives modify the attributes of elements in the DOM using [ngClass], [ngStyle]</li>
+            </ol>
+        </li>
+        <li><strong>What is Data binding and why we use it ? </strong><br>
+            Data binding is the way to show component data into Html view format. 
+             <ol>
+                <li>Property Binding</li>
+                <li>Interpolation</li>
+             </ol>
+        </li>
+        <li>Difference between Interpolation and Property-Binding
+            <ol>
+                <li>Interpolation:- Interpolation is one of the core features used for binding data from the component class to the HTML template. It is denoted by {{ }}.</li>
+                <pre>
+                     <!-- Example of Interpolation -->
+                        // component.ts
+                        export class AppComponent {
+                            title = 'Hello, World!';
+                        }
+                        
+                        // component.html
+                      <h1>{{ title }}</h1>
+                </pre>
+                <li> Property binding is used to bind a property from the component to a DOM property of an element. It is denoted by [].</li>
+                <pre>
+                    // component.ts
+                    export class AppComponent {
+                      title = "Hello vishal"
+                    }
+                    
+                    // component.html
+                        <h1 [innerHtml]="title"></h1>
+                </pre>
+            </ol>
+        </li>
+        <li> What is two way binding ?
+            <ol>
+                <li> When we work on component to view and view to component at a time.</li>
+                <li><!-- Example of Two way binding -->
+                    <!-- app.component.ts -->
+                    export class AppComponent {
+                      inputText: string = '';
+                    }
+                    
+                    <!-- app.component.html -->
+                      <input [(ngModel)]="inputText" placeholder="Enter text here" />
+                      <p>You Typed:{{ inputText }}</p>
+                </li>
+            </ol>
+        </li>
+        <li>what is dynamic binding?
+            <ol>
+                <li>Refers to binding values dynamically at runtime, like using {{ }}, [property], or (event) binding.</li>
+                <li>It allows updating the UI based on component data or responding to user actions.</li>
+                <pre>
+                    <!-- Example:(1)--->
+                    <!-- app.component.ts -->
+                        export class AppComponent {
+                            dynamicColor = "blue";
+                        }
+                
+                        <!-- app.component.html -->
+                            <h1 [style.color]="dynamicColor">Hello World</h1>
+                
+                        <!-- Example:(2)---->
+                        <div class="container2">
+                            <input [(ngModel)]="inputText" placeholder="Type something.." />
+                        </div>
+                        
+                        <div *ngIf="inputText">
+                            <p [ngStyle]="{ color: 'blue' }">{{ inputText }}</p>
+                        </div>
+                
+                        <!-- app.component.ts -->
+                        export component AppComponent{
+                            inputText:string = '';
+                        }
+                </pre>
+            </ol>
+        </li>
+        <li>Directives & There types
+            <ol>
+                <li>In Angular, Directives are special markers on a DOM element (such as an attribute, element, or class) that tell Angular to perform specific actions or apply specific behavior to that element. Directives play a vital role in Angular, helping you to extend HTML capabilities and modify DOM behavior dynamically.</li>
+                <li>There are three main types of directives in Angular:
+                    <ol>
+                        <li>Component Directives (a special type of directive):-Components are essentially directives with their own templates. Every Angular component is a directive with a template.selector: The app-example selector can be used in HTML like <app-example></app-example> to invoke this component.</li>
+
+                        <li>Structural Directives:-Structural directives alter the layout of the DOM by adding, removing, or manipulating elements. They change the structure of the view. These directives use the * symbol when applied in templates.
+                            <ol>
+                                <li>*ngIf: Conditionally includes/excludes elements.</li>
+                                <li>*ngFor: Repeats an element for each item in a list.</li>
+                                <li>*ngSwitch: A set of directives to switch between different templates.</li>
+                            </ol>
+                        </li>
+                        <li>Attribute Directives:-Attribute directives change the appearance or behavior of an element. Unlike structural directives, they do not modify the DOM structure but can manipulate DOM attributes.
+                            <ol>
+                                <li>ngClass: Adds/removes a set of CSS classes.</li>
+                                <li>ngStyle: Adds/removes inline styles.</li>
+                                <li>Example of ngClass:- <p [ngClass]="{'active': isActive, 'inactive': !isActive}">This is a paragraph.</p>
+                                </li>
+                                <li>Example of ngStyle:- <p [ngStyle]="{'color': isActive ? 'green' : 'red'}">This text changes color based on isActive.</p>
+                                </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+        </li>
+        <li>What is pipes in Angular?
+            <ol>
+                <li>Pipes are a powerful feature of Angular that allow you to transform and format data in a way that is easy to read and understand.</li>
+                <li>Angular comes with a set of built-in pipes, but you can also create custom pipes to perform specific transformations.</li>
+                <li>With the help of Pipes we transformmed the data as:- uppercase,change the date fromat in dd-mm-yyyy.</li>
+                <pre>
+                    <!-- Example:(1)--->
+                    <!-- app.component.ts -->
+                        export class AppComponent {
+                            today = new Date();
+                        }
+                
+                        <!-- app.component.html -->
+                        <p>{{ today | date:'dd-MM-yyyy' }}</p>
+
+                        <!-- Example:(2)---->
+                        <p>{{ today | date:'dd-MM-yyyy' | uppercase }}</p> 
+                </pre>
+            </ol>
+        </li>
+        <li><strong>What are Angular Template ? </strong> <br>
+            Template are HTML Files and Ts are class file.Template are used to show class logic in Html view.
+        </li>
+        <li><strong>What are Services and Why we use it ? </strong> <br>
+            Services is a class or piece of code that we reuse in more than one component to show or display data.For example:-We have student data that already show in Header component,So we also show the data in Footer component.
+        </li>
+        <li><strong>What are Observables and Why we use it ? </strong> <br>
+            Observables are a type of object that can emit multiple values over time.
+        </li>
+        <li><strong>What is Dependency Injection ? </strong> <br>
+            The word Dependency that means one component depends on other component to perform/Inject some action.Like we have two component,card.component.ts and message.service.ts so card component depends on message component to call method of message component.
+        </li>
+        <li> <strong>What is Reactive Form in Angular ? </strong> <br>
+            With the help of Reactive Form we validate and update our forms data.You can add or remove controls at run time.
+        </li>
+        <li><strong>Difference between Static Routing and Dynamic Routing ? </strong><br>
+            Static routing is a process that help to go one view to another view as user perform taks in web-app.For example:-We create three components like,home,login,singup components then we set all three routing in app-routing-module.ts,in this file routes variable is there to set the path of component-wise.After that in html file create html link with a routerLink to set the compents link. <br>
+            Dynamic routing is useful when we fetch the list data information from database.
+        </li>
+        <li><strong>How to create Form & Submit a Form data ? </strong><br>
+            We create a form in angular with form tag and define submit function with ngsubmit to submit form data value.When we use form then we must import formsmodule in app.module.ts files and formgroup in form tag of html content.
+        </li>
+        <li><strong>How to display a list of data with for loop. ? </strong><br>
+            Declare user object data in app.component.ts file then display that data in html file with ngFor directives.
+        </li>
+        <li><strong>What is Lazy loading and why we use it? </strong><br>
+            Lazy loading is a technique that allows you to load modules and components only when they are needed,reducing the initial load time of an application. For example we have thousand of component in our project and thousand of links to render that project,when user visit in our website then all component loaded then our website get slow to resolve that problem we use lazy loading,lazy loading only load that page that we need other's are not loaded,like user click on service then only service page load not all pages load then our website rendering fast.
+        </li>
+    </ol>
+</body>
+</html>

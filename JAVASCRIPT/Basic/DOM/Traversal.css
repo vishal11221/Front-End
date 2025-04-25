@@ -1,0 +1,27 @@
+#Outer{
+    border: 2px solid black;
+    margin: 50px;
+    padding: 16px;
+    width: 55%;
+    background-color: rgb(238, 238, 107);
+}
+
+#Inner{
+    border: 2px solid black;
+    width: 95%;
+    background-color: rgb(244, 178, 202);
+    margin-bottom: 44px;
+    margin-left: 13px;
+}
+
+#Inner div{
+    display: inline-block;
+    border: 2px solid black;
+    margin: 13px;
+}
+
+#Inner div A{
+    padding: 12px;
+}
+
+

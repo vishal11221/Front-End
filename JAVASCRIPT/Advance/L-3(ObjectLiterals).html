@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Literals in JavaScript</title>
+</head>
+<body>
+    <ol>
+        <li>An object literal is a comma-separated list of key-value pairs wrapped in curly braces {}.</li>
+    </ol>
+    <script>
+        // Example 1:- 
+        const person = {
+             name: "Alice",
+             age: 25,
+             isStudent: true
+        };
+
+        console.log(person.name);      // Output: Alice
+        console.log(person["age"]);    // Output: 25
+
+        //Exmaple 2:- 
+          var name = "vishal";
+          var designation = "Software Engineer";
+
+          var user = {
+               name,
+               designation
+          }
+          console.log(user);
+          console.log(user.name);
+    </script>
+</body>
+</html>

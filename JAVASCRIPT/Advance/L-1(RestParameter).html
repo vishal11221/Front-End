@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Parameter | Rest Operator</title>
+</head>
+<body>
+    <ol>
+        <li>The rest parameter in JavaScript (...) allows you to collect multiple arguments into a single array. It's super handy when you don't know how many arguments a function might receive.</li>
+    </ol>
+
+    <script>
+        function sum(...numbers) {
+          return numbers.reduce((total, num) => total + num, 0);
+        }
+        console.log(sum(1, 2, 3));      // Output: 6
+        console.log(sum(4, 5, 6, 7));   // Output: 22
+    </script>
+</body>
+</html>

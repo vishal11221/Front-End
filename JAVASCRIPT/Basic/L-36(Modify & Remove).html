@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modify & Remove Array Element</title>
+</head>
+<body>
+    
+    <script>
+        var arr = ['Vishal','MCA',83.5,'Motihari',8809739667];
+
+        arr[2] = 85.3;
+        arr[0] = 'Rohan';
+
+        delete arr[4];
+        
+        arr.forEach(arr => {
+            console.log(arr);
+        });
+
+        //Output:- Rohan,MCA,85.3,Motihari
+    </script>
+</body>
+</html>

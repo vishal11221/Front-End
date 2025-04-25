@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Argument in JavaScript</title>
+</head>
+<body>
+    <ol>
+        <li>The spread syntax in JavaScript (...) is used to unpack elements from an array or object—the opposite of rest parameters.</li>
+    </ol>
+
+    <script>
+        function sum(a, b, c) {
+          return a + b + c;
+        }
+
+        const nums = [1, 2, 3];
+        console.log(sum(...nums)); // Output: 6
+    </script>
+</body>
+</html>

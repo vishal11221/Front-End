@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generators in JavaScript</title>
+</head>
+<body>
+    <ol>
+        <li>A generator is a special function that can pause and resume its execution using the yield keyword.</li>
+        <li>It returns an iterator, and each yield gives a new value.</li>
+    </ol>
+
+    <script>
+        function* greetGenerator() {
+            yield "Hello";
+            yield "Hi";
+            yield "Namaste";
+        }
+
+        const greeter = greetGenerator();
+
+        console.log(greeter.next()); // { value: 'Hello', done: false }
+        console.log(greeter.next()); // { value: 'Hi', done: false }
+        console.log(greeter.next()); // { value: 'Namaste', done: false }
+        console.log(greeter.next()); // { value: undefined, done: true }
+    </script>
+</body>
+</html>

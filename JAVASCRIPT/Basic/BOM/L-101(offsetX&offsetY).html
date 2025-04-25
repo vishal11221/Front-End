@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>offsetX and offsetY</title>
+    <style>
+        #box{
+            border: 1px solid black;
+            background-color: bisque;
+            height: 400px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+   <p>The offsetX property helps to get the specific elements width or x coordinates.</p> 
+
+   <div id="box">
+      
+   </div>
+
+   <script>
+      var target = document.querySelector('#box');
+      target.addEventListener('mouseover',function(e){
+           console.clear()
+           var x = e.offsetX;
+           var y = e.offsetY;
+
+           console.log(x);
+           console.log(y);
+      })
+   </script>
+</body>
+</html>
