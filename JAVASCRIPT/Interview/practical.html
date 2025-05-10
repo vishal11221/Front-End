@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical Interview Questions</title>
+</head>
+<body>
+    <h2>Practical Interview Questions:-</h2>
+    
+    <script>
+         // Reverse a string
+         function reverse(str) {
+            return str.split("").reverse().join("");
+        }
+        console.log(reverse("Hello"));
+        
+        // Write a function to check if a string is palindrome or not.
+        function palindrome(str) {
+            return str === str.split("").reverse().join("");
+        }
+        console.log(palindrome("racecar"));
+
+        // Write a function to find fabonacci series.
+        function fibonacci(n) {
+            let series = [];
+            let a = 0, b = 1;
+            for(let i = 2; i < n; i++) {
+                series.push(a);
+                [a,b] = [b, a + b];
+            }
+            return series;
+            }
+        console.log(fibonacci(5));
+
+         // Write a function to find factorial of a number.
+         function fact(n) {
+            if (n === 0) {
+                return 1;
+            }
+            return n * fact(n - 1);
+        }
+        console.log(fact(5));
+
+         // Write a function to find even numbers from the given array.
+         function even(arr) {
+            return arr.filter(num => num % 2 == 0);
+        }
+        console.log(even([1, 2, 3, 4, 5]));
+
+        // Write a function that takes an array of numbers as an argument and returns a new array with only the odd numbers.
+        function odd(arr) {
+            return arr.filter(num => num % 2 !== 0);
+        }
+        console.log(odd([1, 2, 3, 4, 5]));
+
+        // Write a function to find prime no in an array of numbers.
+        function prime(arr) {
+            return arr.filter(num => {
+                for (let i = 2; i <= Math.sqrt(num); i++) {
+                    if (num % i == 0) {
+                        return false;
+                    }
+                }
+                return true;
+            });
+        }
+        console.log(prime([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+
+        // Write a function that find the largest number in an array of numbers.
+        function max(arr) {
+            return Math.max(...arr);
+        }
+        console.log(max([1, 2, 3, 4, 5]));
+
+        // Write a function that find the smallest number in an array of numbers.
+        function min(arr) {
+            return Math.min(...arr);
+        }
+        console.log(min([1, 2, 3, 4, 5]));
+
+        // Write a function that takes two numbers as arguments and returns the sum of those numbers.
+        function sum(a, b) {
+            return a + b; 
+        }
+        console.log(sum(5, 10));
+
+        // Write a function that takes a string as an argument and returns the length of that string.
+        function length(str) {
+            return str.length;
+        }
+        console.log(length("Hello"));
+
+        // Write a function that takes an array as an argument and returns the last element of that array.
+        function last(arr) {
+            return arr[arr.length - 1];
+        }
+        console.log(last([1, 2, 3, 4, 5]));
+
+        // Write a function that takes an array as an argument and returns the first element of that array.
+        function first(arr) {
+            return arr[0];
+        }
+        console.log(first([1, 2, 3, 4, 5]));
+
+        // Write a function to insert an element at last inded using push method.
+        function insert(arr, element) {
+            arr.push(element);
+            return arr; 
+        }
+        console.log(insert([1, 2, 3, 4, 5], 6));
+
+        // Write a function to insert an element at first inded using unshift method.
+        function insertFirst(arr, element) {
+            arr.unshift(element);
+            return arr; 
+        }
+        console.log(insertFirst([1, 2, 3, 4, 5], 0));
+
+        // Write a function to remove an element at last inded using pop method.
+        function removeLast(arr) {
+            arr.pop();
+            return arr; 
+        }
+        console.log(removeLast([1, 2, 3, 4, 5]));
+
+        // Write a function to remove an element at first inded using shift method.
+        function removeFirst(arr) {
+            arr.shift();
+            return arr; 
+        }
+        console.log(removeFirst([1, 2, 3, 4, 5]));
+
+        // Write a function that Remove Duplicate from an array of numbers.
+        function unique(arr) {
+            return Array.from(new Set(arr));
+        }
+        console.log(unique([1, 2, 3, 4, 5, 1, 2, 3, 4, 5]));
+
+        // Write a function that find sum of all number in an array of numbers.
+        function sum(arr) {
+            return arr.reduce((a, b) => a + b);
+        }
+        console.log(sum([1, 2, 3, 4, 5]));
+        
+         // Write a function that takes an array of numbers as an argument and returns the average of those numbers.
+         function average(arr) {
+            return arr.reduce((a, b) => a + b) / arr.length;
+        }
+        console.log(average([1, 2, 3, 4, 5]));
+
+        // Write a function that Count the occurrence of each number in an array of numbers.
+        function count(arr) {
+            return arr.reduce((a, b) => {
+                a[b] = (a[b] || 0) + 1;
+                return a;
+            }, {});
+        }
+        console.log(count([1, 2, 3, 4, 5, 1, 2, 3, 4, 5]));
+
+        // Write a function that Count the occurrence of each character in string.
+        function count(str) {
+            return str.split("").reduce((a, b) => {
+                a[b] = (a[b] || 0) + 1;
+                return a;
+            }, {});
+        }
+        console.log(count("Hello"));
+
+        // write a function that count the vowels in a string of upper and lower case.
+        function countVowels(str) {
+            const vowels = "aeiouAEIOU";
+            return str.split("").reduce((a, b) => {
+                if (vowels.includes(b)) {
+                    a[b] = (a[b] || 0) + 1;
+                }
+                return a;
+            }, {});
+        }
+        console.log(countVowels("Hello"));
+    </script>
+</body>
+</html>
