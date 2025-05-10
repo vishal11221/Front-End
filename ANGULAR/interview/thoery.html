@@ -98,10 +98,12 @@
             </ol>
         </li>
         <li><strong>What is Data binding and why we use it ? </strong><br>
-            Data binding is the way to show component data into Html view format. 
+            Data binding is a feature of Angular that allows you to communicate between class and view through the use of interpolation, property binding, event binding, and two-way binding. 
              <ol>
-                <li>Property Binding</li>
                 <li>Interpolation</li>
+                <li>Property Binding</li>
+                <li>Event Binding</li>
+                <li>Two way binding</li>
              </ol>
         </li>
         <li>Difference between Interpolation and Property-Binding
@@ -129,6 +131,25 @@
                 </pre>
             </ol>
         </li>
+        <li>What is Event Binding ?
+            <ol>
+                <li>It is a feature of Angular that allows you to bind events to components and respond to user actions.</li>
+                <li>Event binding is used to bind an event handler function to a specific event of a DOM element in the view.</li>
+
+                <pre>
+                    // component.ts
+                    export class AppComponent {
+                      title = "Hello vishal"
+                      onClick() {
+                        console.log("Button clicked!");
+                      }
+                    }
+                    
+                    // component.html
+                        <button (click)="onClick()">Click Me</button>
+                </pre>
+            </ol>
+        </li>
         <li> What is two way binding ?
             <ol>
                 <li> When we work on component to view and view to component at the same time.</li>
@@ -146,8 +167,8 @@
         </li>
         <li>what is dynamic binding?
             <ol>
-                <li>Refers to binding values dynamically at runtime, like using {{ }}, [property], or (event) binding.</li>
-                <li>It allows updating the UI based on component data or responding to user actions.</li>
+                <li>The method, property, or value is decided at runtime, not at compile time.</li>
+                <li>It allows updating the UI based on component data or responding to user actions not at compile time, but at runtime</li>
                 <pre>
                     <!-- Example:(1)--->
                     <!-- app.component.ts -->
@@ -230,6 +251,7 @@
             <ol>
                 <li>In Observable all subscriber have seperate execution.Observable does not allow user to manually push the data.</li>
                 <li>In Subject all subscriber get the same execution. Subject allow user to manually push the data.</li>
+                <li></li>
             </ol>
         </li>
     </ol>

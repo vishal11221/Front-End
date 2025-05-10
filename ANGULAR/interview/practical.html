@@ -7,7 +7,7 @@
 </head>
 <body>
     <ol>
-        <li>Create Home,About,Contact and User components using angular and set it routings to navigate.(Routing)
+        <li class="1">Create Home,About,Contact and User components using angular and set it routings to navigate.(Routing)
             <ol>Steps:- 
                 <li>Create components, home, about, contact and user</li>
                 <pre>
@@ -49,7 +49,7 @@
                 </pre>
             </ol>
         </li>
-        <li>When User click on User component from Navbar then User list should be display on the screen. 
+        <li class="2">When User click on User component from Navbar then User list should be display on the screen in tabular form.
             <pre>
                 <!-- user.component.ts -->
                 import { Component, OnInit } from '@angular/core';
@@ -90,9 +90,20 @@
                     </tr>
                   </tbody>
                 </table>
+
+                <!-- user.component.css -->
+                  table {
+                    border: 1px solid black;
+                  }
+                  thead th {
+                    border: 1px solid black;
+                  }
+                  table td {
+                    border: 1px solid black;
+                  }
             </pre>
         </li>
-        <li>Display the title of page using Interpolation and property binding
+        <li class="3">Display the title of page using Interpolation and property binding
           <pre>
               <!-- user.component.html -->
               <h1>{{ title }}</h1>
@@ -104,7 +115,7 @@
               }
           </pre>
         </li>
-        <li>Create on input field, when user enter value in input field then value should be display at the bottom of screen
+        <li class="4">Create on input field, when user enter value in input field then value should be display at the bottom of screen
           <pre>
               <!-- contact.component.html -->
               <input type="text" [(ngModel)]="text" />
@@ -124,7 +135,7 @@
               }
           </pre>
         </li>
-        <li>Create a input field and submit button and when user click on submit button then value should be display at the bottom of screen and text field value should be empty.
+        <li class="5">Create a input field and submit button and when user click on submit button then value should be display at the bottom of the screen and text field value should be empty.
           <pre>
               <!-- about.component.html -->
               <input type="text" [(ngModel)]="InputTxt" />
@@ -151,37 +162,344 @@
               }
           </pre>
         </li>
-        <li>Create a form and bind it with user component.
+        <li class="6">Create one button show/hide, when user click on hide user data should be hide, when user click on show user data should be display and show/hide button text should be change.
+
             <pre>
                 <!-- user.component.html -->
-                <form [formGroup]="userForm">
-                  <label for="name">Name:</label>
-                  <input type="text" id="name" formControlName="name" />
-                  <label for="age">Age:</label>
-                  <input type="number" id="age" formControlName="age" />
-                </form>
-            </pre>
+                <ul *ngIf="showUsers">
+                  <li *ngFor="let user of users">
+                    {{ user.name }}
+                  </li>
+                </ul>
+                <button (click)="showUsers = !showUsers">{{showUsers ? 'Hide' : 'Show'}}</button>
 
-            <pre>
                 <!-- user.component.ts -->
-                import { Component, OnInit } from '@angular/core';
-                import { FormControl, FormGroup } from '@angular/forms';
+                export class UsersComponent {
+                  users = [
+                    {
+                      name: 'vishal',
+                      role: 'Software Engineer',
+                      email: 'itsvishalraj98@gmail.com',
+                    },
+                    { name: 'rohan', role: 'Iot Engineer', email: 'rohandas08@gmail.com' },
+                    { name: 'mohan', role: 'System Engineer', email: 'mohandas88@gmail.com' },
+                  ];
+                  showUsers = true;
+                }
+            </pre>
+        </li>
+        <li class="7">Create one paragraph, that paragraph color change based on clicking button.
+            <pre>
+                <!-- user.component.html -->
+                <p [ngStyle]="{ color: buttonClicked ? 'red' : 'blue' }">
+                  This is a paragraph.
+                </p>
+                <button (click)="buttonClicked = !buttonClicked">Toggle Color</button>
+
+                <!-- user.component.ts -->
+                export class UsersComponent {
+                  buttonClicked = false;
+                }
+            </pre>
+        </li>
+        <li class="8">Create paragraph set color as blue using Dyamic binding property.
+            <pre>
+                <!-- user.component.html -->
+                <p [style.color]="textColor">This is a paragraph.</p>
+
+                <!-- user.component.ts -->
+                 textColor = 'blue';
+            </pre>   
+        </li>
+        <li class="9">Show name in uppercase and email is lowercase using pipe.
+            <pre>
+                <!-- user.component.html -->
+                <p>{{ name | uppercase }}</p>
+                <p>{{ email | lowercase }}</p>
+                <!-- user.component.ts -->
+                export class UsersComponent {
+                  name = 'vishal';
+                  email = 'itsvishalraj98@gmail.com';
+                }
+            </pre>
+        </li>
+        <li class="10">Show date in dd-mm-yyyy format using pipe and current date, fulldate, shorttime using pipe.
+          <pre>
+              <!-- user.component.html -->
+              <p>{{ today | date:'dd-MM-yyyy' }}</p>
+              <p>{{ today | date:'fullDate' }}</p>
+              <p>{{ today | date:'shortTime' }}</p>
+              <!-- user.component.ts -->
+              export class UsersComponent {
+                today = new Date();
+              }
+          </pre>
+        </li>
+        <li class="11">Create one module inside create four components and set it routing.
+            <pre>
+                <!-- step1:- Create admin module with routing -->
+                     <!-- ng generate module admin --routing -->
+                     <!-- Then you got two files:- -->
+                     <!-- admin.module.ts -->
+                     <!-- admin-routing.module.ts -->
+
+                <!-- step2:- create component inside admin module as:-  -->
+                            <!-- ng g c admin/login -->
+                            <!-- ng g c admin/profile  -->
+                            <!-- ng g c admin/data -->
+
+                <!-- step3:- set routing in admin-routing.module.ts file. -->
+                        import { NgModule } from '@angular/core';
+                        import { RouterModule, Routes } from '@angular/router';
+                        import { LoginComponent } from './login/login.component';
+                        import { ProfileComponent } from './profile/profile.component';
+                        import { DataComponent } from './data/data.component';
+                        const routes: Routes = [
+                          { path: 'login', component: LoginComponent },
+                          { path: 'profile', component: ProfileComponent },
+                          { path: 'data', component: DataComponent },
+                        ];
+                        @NgModule({
+                          imports: [RouterModule.forChild(routes)],
+                          exports: [RouterModule],
+                        })
+                        export class AdminRoutingModule {}
+
+                      <!-- step4:- set admin children routes in parent app-routing.module.ts file. -->
+                         const routes: Routes = [
+                           { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) },
+                         ]
+
+                      <!-- step5:- set routes in app.component.html:-  -->
+                          <ul>
+                            <li>
+                              <a routerLink="/admin/login">Login</a>
+                            </li>
+                            <li>
+                              <a routerLink="/admin/profile">Profile</a>
+                            </li>
+                            <li>
+                              <a routerLink="/admin/data">Data</a>
+                            </li>
+                          </ul>                     
+            </pre>
+        </li>
+        <li class="12">Fetch data from api and show in console
+          <pre>
+              <!-- step 1:- Import HttpClientModule in app.module.ts file. -->
+              <!-- step 2:- We need constructor inside bracket (private http: HttpClient). -->
+              <!-- step 3:- Then create one method that fetch data from api and display in console and implements OnInit. -->
+              <!-- step 4:- Inside ngOnInit call the method that we create like this.fetchDetails(); -->
+              <!-- step 5:- Then inside method you call your api like this.http.get('https://jsonplaceholder.typicode.com/posts/1').subscribe(data => console.log(data));  -->
+              <!-- step 6:- Then you display the api data in UI like {{ data.key1 }} :- {{ data.key2 }} -->
+          </pre>
+          <pre>
+            <!-- app.module.ts -->
+              import { NgModule } from '@angular/core';
+              import { BrowserModule } from '@angular/platform-browser';
+              import { AppComponent } from './app.component';
+              import { HttpClientModule } from '@angular/common/http';
+
+              @NgModule({
+                declarations: [AppComponent],
+                imports: [BrowserModule, HttpClientModule],
+                providers: [],
+                bootstrap: [AppComponent]
+              })
+              export class AppModule { }
+
+              <!-- app.component.ts -->
+              import { HttpClient } from '@angular/common/http';
+              import { Component, VERSION } from '@angular/core';
+              @Component({
+                selector: 'my-app',
+                templateUrl: './app.component.html',
+                styleUrls: ['./app.component.css'],
+              })
+              export class AppComponent {
+                name = 'Angular ' + VERSION.major;
+                data: any = {};
+              
+                constructor(private http: HttpClient) {}
+              
+                ngOnInit() {
+                  this.fetchDetails();
+                }
+              
+                fetchDetails() {
+                  this.http.get('https://dummyjson.com/users').subscribe((response) => {
+                    console.log(response);
+                    this.data = response;
+                  });
+                }
+              }
+              
+                <!-- app.component.html -->
+                  <h2>Post Details</h2>
+                  <p><strong>Title:</strong> {{ data.title }}</p>
+                  <p><strong>Body:</strong> {{ data.body }}</p>
+          </pre>
+        </li>
+        <li class="13">Create client service and show that client service data in app.component.html
+            <pre>
+                <!-- client.service.ts -->
+                import { Injectable } from '@angular/core';
+                import { HttpClient } from '@angular/common/http';
+
+                @Injectable({
+                  providedIn: 'root',
+                })
+                export class ClientService {
+                  constructor(private http: HttpClient) {}
+                  getData() {
+                    return this.http.get('https://dummyjson.com/users');
+                  }
+                }
+
+                <!-- app.component.ts -->
+                import { Component, VERSION } from '@angular/core';
+                import { ClientService } from './client.service';
 
                 @Component({
-                  selector: 'app-users',
-                  templateUrl: './users.component.html',
-                  styleUrls: ['./users.component.css'],
+                  selector: 'my-app',
+                  templateUrl: './app.component.html',
+                  styleUrls: ['./app.component.css'],
                 })
-                export class UsersComponent implements OnInit {
-                  userForm = new FormGroup({
-                    name: new FormControl(''),
-                    age: new FormControl(''),
-                  });
+                export class AppComponent {
+                  name = 'Angular ' + VERSION.major;
+                  data: any = {};
+                  constructor(private clientService: ClientService) {}
+                  ngOnInit() {
+                    this.clientService.getData().subscribe((response) => {
+                      console.log(response);
+                      this.data = response;
+                    });
+                  }
+                }
+                
+                Note:- Must import HttpClientModule in app.module.ts file.
 
-                  constructor() {}
+                <!-- app.component.html -->
+                <h2>Post Details</h2>
+                <p><strong>Title:</strong> {{ data.title }}</p>
+                <p><strong>Body:</strong> {{ data.body }}</p>
+            </pre>
+        </li>
+        <li class="14">Create a form in user component after submit user data show in ui in tabular form, if user give wrong input it also validate and form not going to submit.
+            <pre>
+               <!-- user.component.ts  -->
+                import { Component, OnInit } from '@angular/core';
+                import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+                @Component({
+                  selector: 'app-user',
+                  templateUrl: './user.component.html',
+                  styleUrls: ['./user.component.css'],
+                })
+                export class UserComponent implements OnInit {
+                  myForm: FormGroup;
+                  submittedData: any = {};
+
+                  constructor(private fb: FormBuilder) {
+                    this.myForm = this.fb.group({
+                      name: ['', [Validators.required, Validators.minLength(3)]],
+                      email: ['', [Validators.required, Validators.email]],
+                      age: ['', [Validators.required, Validators.min(18)]],
+                    });
+                  }
 
                   ngOnInit() {}
+
+                  onSubmit() {
+                    if (this.myForm.valid) {
+                      this.submittedData = this.myForm.value;
+                      this.myForm.reset();
+                    } else {
+                      console.log('Form is invalid.');
+                    }
+                  }
                 }
+    
+                <!-- user.component.html -->
+                 <div class="container">
+                    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+                      <div>
+                        <label>Name:</label>
+                        <input formControlName="name" />
+                        <div *ngIf="myForm.get('name')?.invalid && myForm.get('name')?.touched">
+                          <small *ngIf="myForm.get('name')?.errors?.required"
+                            >Name is required.</small
+                          >
+                          <small *ngIf="myForm.get('name')?.errors?.minlength"
+                            >Min 3 characters.</small
+                          >
+                        </div>
+                      </div>
+
+                      <div>
+                        <label>Email:</label>
+                        <input formControlName="email" />
+                        <div *ngIf="myForm.get('email')?.invalid && myForm.get('email')?.touched">
+                          <small *ngIf="myForm.get('email')?.errors?.required"
+                            >Email is required.</small
+                          >
+                          <small *ngIf="myForm.get('email')?.errors?.email">Invalid email.</small>
+                        </div>
+                      </div>
+
+                      <div>
+                        <label>Age:</label>
+                        <input formControlName="age" type="number" />
+                        <div *ngIf="myForm.get('age')?.invalid && myForm.get('age')?.touched">
+                          <small *ngIf="myForm.get('age')?.errors?.required"
+                            >Age is required.</small
+                          >
+                          <small *ngIf="myForm.get('age')?.errors?.min"
+                            >Must be at least 18.</small
+                          >
+                        </div>
+                      </div>
+
+                      <button type="submit">Submit</button>
+                    </form>
+                    <br />
+                    <div *ngIf="submittedData">
+                      <table>
+                        <thead>
+                          <th>Name</th>
+                          <th>Email</th>
+                          <th>Age</th>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>{{ submittedData.name }}</td>
+                            <td>{{ submittedData.email }}</td>
+                            <td>{{ submittedData.age }}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                
+                  <!-- user.component.css -->
+                  .container {
+                    margin: 20px;
+                  }
+                  table {
+                    border: 1px solid black;
+                  }
+                  thead th {
+                    border: 1px solid black;
+                  }
+                  table td {
+                    border: 1px solid black;
+                  }
+                  small{
+                    color: red;
+                    font-size: 10px;
+                  }
+             
+                  <!-- Note:- Must import ReactiveFormsModule in app.module.ts file. -->
             </pre>
         </li>
     </ol>
