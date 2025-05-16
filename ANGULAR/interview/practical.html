@@ -115,7 +115,7 @@
               }
           </pre>
         </li>
-        <li class="4">Create on input field, when user enter value in input field then value should be display at the bottom of screen
+        <li class="4">Create one input field, when user enter value in input field then value should be display at the bottom of screen
           <pre>
               <!-- contact.component.html -->
               <input type="text" [(ngModel)]="text" />
@@ -162,7 +162,7 @@
               }
           </pre>
         </li>
-        <li class="6">Create one button show/hide, when user click on hide user data should be hide, when user click on show user data should be display and show/hide button text should be change.
+        <li class="6">Create one button show/hide, when user click on hide user data should be hide, when user click on show user data should be display and  text should be toggle.
 
             <pre>
                 <!-- user.component.html -->
@@ -341,6 +341,13 @@
           </pre>
         </li>
         <li class="13">Create client service and show that client service data in app.component.html
+             <!-- step1:- First create client service in app folder.
+             step2:- Then create constructor(private http: HttpClient) inside client service.
+             step3:- Then create  method inside client service like getData() to fetch data from api.like this.http.get('https://dummyjson.com/users');
+             step4:- Then create constructor to inject client service in app.component.ts like constructor(private clientService: ClientService).
+             step5:- Then inside ngOnInit call the method that we create like this.clientService.getData().subscribe((response) => { console.log(response); this.data = response; });
+             step6:- Then you display the api data in UI like {{ data.key1 }} :- {{ data.key2 }}
+             Note:- Must import HttpClientModule in app.module.ts file. -->
             <pre>
                 <!-- client.service.ts -->
                 import { Injectable } from '@angular/core';
@@ -384,8 +391,19 @@
                 <p><strong>Title:</strong> {{ data.title }}</p>
                 <p><strong>Body:</strong> {{ data.body }}</p>
             </pre>
-        </li>
-        <li class="14">Create a form in user component after submit user data show in ui in tabular form, if user give wrong input it also validate and form not going to submit.
+         </li>
+         <li>Create client service from their fetch api data and show that api data in header and footer component.
+             <pre>
+                step1:- First create client service in app folder.
+                step2:- Then create constructor(private http: HttpClient) inside client service.
+                step3:- Then create method inside client service like getData() to fetch data from api.like this.http.get('https://dummyjson.com/users');
+                step4:- Then create constructor to inject client service in header and footer component like constructor(private clientService: ClientService).
+                step5:- Then inside ngOnInit call the method that we create like this.clientService.getData().subscribe((response) => { console.log(response); this.data = response; });
+                step6:- Then you display the api data in UI like {{ data.key1 }} :- {{ data.key2 }}
+                Note:- Must import HttpClientModule in app.module.ts file.
+             </pre>
+         </li>
+         <li class="14">Create a form in user component after submit user data show in ui in tabular form, if user give wrong input it also validate and form not going to submit.
             <pre>
                <!-- user.component.ts  -->
                 import { Component, OnInit } from '@angular/core';

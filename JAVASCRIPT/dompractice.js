@@ -1,6 +1,6 @@
 /*1. it show the whole document
       var element = document;
-      console.log(document);
+      console.log(element);
 */
 
 /*2. it show the 10th index element from your current document
