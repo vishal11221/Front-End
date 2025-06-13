@@ -7,7 +7,11 @@
 </head>
 <body>
     <ol>
-        <li>Javascript is a Client Side Scripting Language. It is used to create dynamic and interactive web pages.</li>
+        <li>Tell me about yourself:- My name is vishal raj. I am from Motihari,Bihar. I complete my Engineering from Graphic era university,dehradun.
+        Currently i am working as Software Engineer in REConnect Energy Solution that is located at Bengaluru,karnataka.
+        My role and responsibility to develop web pages based on project requirement using technology, HTML,CSS,BOOTSTRAP,JAVASCRIPT and Angular and working close with my team using Git for verson control and jira for task and project management.</li>
+
+        <li>Javascript is a Client Side Scripting Language. It is used to create dynamic and interactive web pages.Basically JavaScript use to add dynamic behavior to web pages, like click events, form validation, and dynamic content updates.</li>
         <li>Javascript is cross-platform language. It can be used in any platform.</li>
 
         <li>Datatype in Javascript:- String, Number, Boolean, Null, Undefined</li>
@@ -31,6 +35,7 @@
         <li>What is ternary operator in Javascript:- Ternary operator is used to check a condition like if else. for example:- var x = 5; var y = 10; var result = x > 10 ? "Greater" : "Lesser";</li>
 
         <li>What is closure in Javascript:- Closures are created when a function returns a function.Closures allow inner functions to access variables from their outer function scope, even after the outer function has returned.for example:-
+
             function outerFunction() {
                 var x = 5;
                 y = 10; // Still global (intentionally left as-is to match original)
@@ -45,6 +50,20 @@
             
             var result = outerFunction(); // Call outer and store the inner function
             console.log(result()); // Output: 15
+        </li>
+
+        <li>What is callback in JavaScript:- Callback is a function that is passed as an argument to another function and is executed after the completion of that function. 
+         // Example of a callback function
+            function greet(name) {
+                console.log(`Hello, ${name}!`);
+            }
+            
+            function sayHello(callback, name) {
+                callback(name);
+            }
+            
+            sayHello(greet, "John");
+            // Output: Hello, John!
         </li>
 
         <li>What is hoisting in Javascript:- Hoisting is a JavaScript mechanism where variables and functions are moved to the top of their scope before code execution. for example:- 
@@ -70,28 +89,7 @@
               var person1 = new Person("John", 30);
               person1.sayHello(); // Output: Hello, my name is John and I am 30 years old.
         </li>
-
-        <li>What is setTimeout and setInterval in JavaScript:- setTimeout() is a JavaScript function that executes a specified function once after a given delay (in milliseconds). setInterval() is a JavaScript function that repeatedly executes a specified function at fixed time intervals (in milliseconds) until it is stopped using clearInterval().
-            Ex:- console.log("Start");
-            setTimeout(function() {
-              console.log("Executed after 2 seconds");
-            }, 2000);
-            
-            console.log("End");
-            
-            Ex:- let count = 0;
-            const intervalId = setInterval(function() {
-              count++;
-              console.log("Count:", count);
-            
-              // Stop the interval after it reaches 5
-              if (count === 5) {
-                clearInterval(intervalId);
-                console.log("Interval stopped");
-              }
-            }, 1000);</li>
-
-        <li>What is Promise in JavaScript:- Promise is a JavaScript object that allows you to handle the success and failure of an asynchronous operation.
+         <li>What is Promise in JavaScript:- Promise is a JavaScript object that allows you to handle the success and failure of an asynchronous operation.
             Ex:- // Create a new promise
             let myPromise = new Promise((resolve, reject) => {
               let success = true;
@@ -112,6 +110,28 @@
                 console.log("Error:", error);
               });
         </li>
+
+        <li>What is setTimeout and setInterval in JavaScript:- setTimeout() is a JavaScript function that executes a specified function once after a given delay (in milliseconds). setInterval() is a JavaScript function that repeatedly executes a specified function at fixed time intervals (in milliseconds) until it is stopped using clearInterval().
+            Ex:- console.log("Start");
+            setTimeout(function() {
+              console.log("Executed after 2 seconds");
+            }, 2000);
+            
+            console.log("End");
+            
+            Example of setInterval:-
+            let count = 0;
+            const intervalId = setInterval(function() {
+              count++;
+              console.log("Count:", count);
+            
+              // Stop the interval after it reaches 5
+              if (count === 5) {
+                clearInterval(intervalId);
+                console.log("Interval stopped");
+              }
+            }, 1000);</li>
+
         <li>What is the difference between document.getElementById() and querySelector():-</li>
 
         <li>Difference between asynchronous and synchronous:- In synchronous execution, tasks are completed one at a time in a single sequence. The code runs from top to bottom, with each line waiting for the previous one to complete before moving on. Each task blocks the next one until it finishes. In asynchronous execution, tasks are executed concurrently, allowing multiple tasks to run in parallel.
@@ -130,24 +150,17 @@
             //Note:- In asynchronous code,some tasks like setTimeout,API calls,promises are delayed and other code continues running without waiting for them.   
         </li>
 
-        <li>What is callback in JavaScript:- Callback is a function that is passed as an argument to another function and is executed after the completion of that function. 
-         // Example of a callback function
-            function greet(name) {
-                console.log(`Hello, ${name}!`);
-            }
-            
-            function sayHello(callback, name) {
-                callback(name);
-            }
-            
-            sayHello(greet, "John");
-            // Output: Hello, John!</li>
+         <li>Difference between async and await ?
+            async and await both are keywords in JavaScript used to handle asynchronous operations. The main difference is that async declare a function as asynchronous and it always returns a Promise, while await is used to pause the execution of an asynchronous function until a Promise is resolved or rejected.
+        </li>
 
-        <li>What is IIFE in JavaScript:- IIFE is an Immediately Invoked Function Expression, which is a self-executing function.
+        <li>What is IIFE in JavaScript:- IIFE is an Immediately Invoked Function Expression, which is a self-executing function.It is a function that runs immediately after it's defined — without being called separately.
         // Example of an Immediately Invoked Function Expression (IIFE)
             (function() {
-                console.log("This code is executed immediately");
+              var name = "Vishalraj";
+              console.log("Hello " + name);
             })();
+
             
             // function expression
             var result = (function() {
@@ -156,7 +169,47 @@
             console.log(result);</li>
 
         <li>What is arrow function ? How it differ from regular function:- Arrow function is a function that is defined using the => operator. It is a shorter way to write a function. for example:- var add = (a, b) => a + b; var multiply = (a, b) => a * b; console.log(add(2, 3)); console.log(multiply(2, 3));</li>
-        <li>Note:- If we have single parameter and single statement then no need of round and curly braces, we can write it like this:- var add = a => a + 5; in a single line.</li>
+        <li>Note:- If we have single parameter and single statement then no need of round and curly braces, we can write it like this:- var add = a => a + 5; console.log(add(2)); in a single line.</li>
+
+        <li>Difference between Rest parameter and Spread operator:- Rest operator is used to collect multiple arguments into a single array. Spread operator is used to expand an array into individual elements.
+            Ex:- function sum(...args) {
+              let total = 0;
+              for (let arg of args) {
+                total += arg;
+              }
+              return total;
+            }
+            console.log(sum(1, 2, 3, 4, 5));
+
+            Example of Spread operator:- 
+            const arr1 = [1, 2, 3];
+            const arr2 = [4, 5, 6];
+            const arr3 = [...arr1, ...arr2];
+            console.log(arr3);
+        </li>
+
+        <li>Difference between function declaration and function expression:- Function declaration is used to declare a function before it is called. Function expression is used to declare a function after it is called.
+            // Function declaration
+            function add(a, b) {
+              return a + b;
+            }
+            
+            // Function expression
+            var add = function(a, b) {
+              return a + b;
+            };
+        </li>
+        <li>What is Template Literals in JavaScript:- Template literals are strings that allow you to embed expressions inside them.It embed expression and string using backticks(`).
+            Ex:- var name = "John";
+            var age = 30;
+            var message = `Hello, my name is ${name} and I am ${age} years old.`;
+        </li>
+        <li>Difference between LocalStorage and SessionStorage:- localStorage is for long-term storage across sessions,
+            while sessionStorage is for temporary storage in a single tab.In localStorage data are stored even after the browser is closed. But in sessionStorage data are deleted when the browser is closed.
+        </li>
+        <li>Difference between Ajax and Fetch:- Ajax is a technique to send/receive data from a server in the background using JavaScript, without refreshing the entire page while Fetch is a modern way to make HTTP requests in JavaScript.Ajax requires jquery(external library) while fetch built into modern browser(no need external library)</li>
+
+        <li>What is console.trace() in JavaScript:- console.trace() allow developers to see the sequence of function calls in the console. It is useful for debugging and tracing code execution.</li>
     </ol>
 </body>
 </html>

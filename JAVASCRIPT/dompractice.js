@@ -411,3 +411,21 @@
 // console.log(add(2, 3));
 // console.log(multiply(2, 3));
 
+//About console.trace
+// function functionA() {
+//   console.trace("Trace from functionA");
+//   functionB();
+// }
+
+// function functionB() {
+//    functionC();
+// }
+
+// function functionC() {
+//   console.log("Inside functionC");
+// }
+
+// functionA();
+
+// Define one box, inside define two color red and green that occupy 50% of the box, when user click on green color then box color should change to green and when user click on red color then box color should change to red
+

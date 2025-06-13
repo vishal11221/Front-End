@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChangeColor</title>
+    <style>
+     .container{
+        width: 500px;
+        height: 100px;
+        border: 2px solid black;
+        display: flex;
+     }
+
+     .half{
+        flex: 1;
+
+     }
+     .red{
+        background-color: red;
+     }
+     .green{
+        background-color: green;
+     }
+    
+    </style>
+</head>
+<body>
+    <h2>Toogle Color</h2>
+    <div class="container">
+        <div class="half red" onclick="changeColor()"></div>
+        <div class="half green" onclick="changeColor()"></div>
+    </div>
+
+    <script>
+        function changeColor(){
+            var left = document.querySelector(".red");
+            var right = document.querySelector(".green");
+
+            if(left.classList.contains("red")){
+                left.classList.remove("red");
+                left.classList.add("green");
+                right.classList.remove("green");
+                right.classList.add("red");
+            }else{
+                left.classList.remove("green");
+                left.classList.add("red");
+                right.classList.remove("red");
+                right.classList.add("green");
+            }
+        }
+    </script>
+</body>
+</html>

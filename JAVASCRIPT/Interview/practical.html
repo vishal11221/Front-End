@@ -33,6 +33,48 @@
             }
         console.log(fibonacci(5));
 
+        // Write a function that find sum of all number in an array of numbers.
+        function sum(arr) {
+            return arr.reduce((a, b) => a + b);
+        }
+        console.log(sum([1, 2, 3, 4, 5]));
+        
+         // Write a function that takes an array of numbers as an argument and returns the average of those numbers.
+         function average(arr) {
+            return arr.reduce((a, b) => a + b) / arr.length;
+        }
+        console.log(average([1, 2, 3, 4, 5]));
+
+        // Write a function that Count the occurrence of each number in an array of numbers.
+        function count(arr) {
+            return arr.reduce((a, b) => {
+                a[b] = (a[b] || 0) + 1;
+                return a;
+            }, {});
+        }
+        console.log(count([1, 2, 3, 4, 5, 1, 2, 3, 4, 5]));
+
+        // Write a function that Count the occurrence of each character in string.
+        function count(str) {
+            return str.split("").reduce((a, b) => {
+                a[b] = (a[b] || 0) + 1;
+                return a;
+            }, {});
+        }
+        console.log(count("Hello"));
+
+        // write a function that count the vowels in a string of upper and lower case.
+        function countVowels(str) {
+            const vowels = "aeiouAEIOU";
+            return str.split("").reduce((a, b) => {
+                if (vowels.includes(b)) {
+                    a[b] = (a[b] || 0) + 1;
+                }
+                return a;
+            }, {});
+        }
+        console.log(countVowels("Hello"));
+
          // Write a function to find factorial of a number.
          function fact(n) {
             if (n === 0) {
@@ -136,48 +178,6 @@
             return Array.from(new Set(arr));
         }
         console.log(unique([1, 2, 3, 4, 5, 1, 2, 3, 4, 5]));
-
-        // Write a function that find sum of all number in an array of numbers.
-        function sum(arr) {
-            return arr.reduce((a, b) => a + b);
-        }
-        console.log(sum([1, 2, 3, 4, 5]));
-        
-         // Write a function that takes an array of numbers as an argument and returns the average of those numbers.
-         function average(arr) {
-            return arr.reduce((a, b) => a + b) / arr.length;
-        }
-        console.log(average([1, 2, 3, 4, 5]));
-
-        // Write a function that Count the occurrence of each number in an array of numbers.
-        function count(arr) {
-            return arr.reduce((a, b) => {
-                a[b] = (a[b] || 0) + 1;
-                return a;
-            }, {});
-        }
-        console.log(count([1, 2, 3, 4, 5, 1, 2, 3, 4, 5]));
-
-        // Write a function that Count the occurrence of each character in string.
-        function count(str) {
-            return str.split("").reduce((a, b) => {
-                a[b] = (a[b] || 0) + 1;
-                return a;
-            }, {});
-        }
-        console.log(count("Hello"));
-
-        // write a function that count the vowels in a string of upper and lower case.
-        function countVowels(str) {
-            const vowels = "aeiouAEIOU";
-            return str.split("").reduce((a, b) => {
-                if (vowels.includes(b)) {
-                    a[b] = (a[b] || 0) + 1;
-                }
-                return a;
-            }, {});
-        }
-        console.log(countVowels("Hello"));
     </script>
 </body>
 </html>
