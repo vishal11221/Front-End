@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular MCQ</title>
+</head>
+<body>
+    <ol>
+        <li>What is Angular?
+            <ol>
+                <li>Framework</li>
+            </ol>
+        </li>
+        <li>What is @Input() used for?
+            <ol>
+                <li>Pass data from parent to child component</li>
+            </ol>
+        </li>
+        <li>What does ngIf do?
+            <ol>
+                <li>Conditional rendering</li>
+            </ol>
+        </li>
+        <li>What is ngOnInit()?
+            <ol>
+                <li>Lifecycle hook</li>
+            </ol>
+        </li>
+        <li>What is HttpClientModule for?
+            <ol>
+                <li>Handle API requests</li>
+            </ol>
+        </li>
+        <li>What does ng generate c do?
+            <ol>
+                <li>Generate a new component</li>
+            </ol>
+        </li>
+        <li>Which decorator is used to create a service?
+            <ol>
+                <li>@Injectable()</li>
+            </ol>
+        </li>
+        <li>Which syntax is used for two-way binding?
+            <ol>
+                <li>[()]</li>
+            </ol>
+        </li>
+        <li>Which directive is used for conditional rendering?
+            <ol>
+                <li>*ngIf</li>
+            </ol>
+        </li>
+        <li>How do you pass data from parent to child component?
+            <ol>
+                <li>Using @Input() decorator</li>
+            </ol>
+        </li>
+        <li>How do you pass data from child to parent component ?
+            <ol>
+                <li>Using @Output() decorator</li>
+            </ol>
+        </li>
+        <li>What does ngOnInit() do?
+            <ol>
+                <li>Initialize the component or Called once after component is initialized</li>
+            </ol>
+        </li>
+        <li>Which service is used to make HTTP calls in Angular?
+            <ol>
+                <li>HttpClient</li>
+            </ol>
+        </li>
+        <li>What is the role of a SPA (Single Page Application)?
+            <ol>
+                <li>Updates content dynamically without full reload</li>
+            </ol>
+        </li>
+        <li>What does RouterModule.forRoot() do?
+            <ol>
+                <li>Registers router</li>
+            </ol>
+        </li>
+        <li>What is a pipe in Angular?
+            <ol>
+                <li>Used to transform data</li>
+            </ol>
+        </li>
+        <li>Which HTTP method is used to update data?
+            <ol>
+                <li>PUT</li>
+            </ol>
+        </li>
+        <li>Which protocol is more secure for websites?
+            <ol>
+                <li>HTTPS</li>
+            </ol>
+        </li>
+        <li>What is the purpose of ngOnInit() lifecycle hook?
+            <ol>
+                <li>Initialization logic after component is created</li>
+            </ol>
+        </li>
+        <li>What does providedIn: 'root' mean in a service?
+            <ol>
+                <li>Make it a singleton service available app-wide</li>
+            </ol>
+        </li>
+        <li>Which operator cancels previous HTTP calls on new input?
+            <ol>
+                <li>switchMap</li>
+            </ol>
+        </li>
+        <li>What is the difference between Subject and BehaviorSubject?
+            <ol>
+                <li>Subject allows multiple observers, while BehaviorSubject allows only one observer</li>
+            </ol>
+        </li>
+        <li>What does Angular use under the hood for routing?
+            <ol>
+                <li>HTML5 History API</li>
+            </ol>
+        </li>
+        <li>What does ngFor need to optimize performance?
+            <ol>
+                <li>Use trackBy function</li>
+            </ol>
+        </li>
+        <li>What’s the purpose of CanActivate guard?
+            <ol>
+                <li>Restrict or allow route access</li>
+            </ol>
+        </li>
+        <li>What does HttpClient.get() return?
+            <ol>
+                <li>Observable</li>
+            </ol>
+        </li>
+        <li>Which module is used to work with forms?
+            <ol>
+                <li>ReactiveFormsModule</li>
+            </ol>
+        </li>
+        <li>Which operator is used to retry HTTP request on failure?
+            <ol>
+                <li>retry()</li>
+            </ol>
+        </li>
+        <li>How do you handle errors in observables?
+            <ol>
+                <li>
+                    Use catchError()
+                </li>
+            </ol>
+        </li>
+        <li>Which pipe makes observable values usable in templates?
+            <ol>
+                <li>AsyncPipe</li>
+            </ol>
+        </li>
+        <li>How to stop memory leaks in subscriptions?
+            <ol>
+                <li>Use unsubscribe() or takeUntil()</li>
+            </ol>
+        </li>
+        <li>What is lazy loading?
+            <ol>
+                <li>Loading modules and components only when they are needed</li>
+            </ol>
+        </li>
+        <li>Which decorator marks a class as an Angular component?
+            <ol>
+                <li>@Component</li>
+            </ol>
+        </li>
+        <li>Which lifecycle hook runs when @Input() changes?
+            <ol>
+                <li>ngOnChanges</li>
+            </ol>
+        </li>
+        <li>What is the purpose of NgModule?
+            <ol>
+                <li>It Organize related components, directives, services, and pipes</li>
+            </ol>
+        </li>
+        <li>What is a standalone component in Angular 14+?
+            <ol>
+                <li>A component that doesn't need to be declared in an NgModule</li>
+            </ol>
+        </li>
+        <li>const subject = new Subject<number>();
+
+            subject.subscribe(val => console.log('A:', val));
+            subject.next(1);
+
+            setTimeout(() => {
+            subject.subscribe(val => console.log('B:', val));
+            subject.next(2);
+            }, 0);
+            <ol>
+                <li>Answer: A: 1, B: 2</li>
+            </ol>
+        </li>
+        <li>const obs$ = of(1, 2, 3).pipe(
+            map(x => x * 2),
+            filter(x => x > 4)
+            );
+
+            obs$.subscribe(console.log);
+            <ol>
+                <li>Answer: 6</li>
+            </ol>
+        </li>
+        <li>import { of } from 'rxjs';
+
+            console.log('Start');
+            of(1, 2, 3).subscribe(val => console.log('Value:', val));
+            console.log('End');
+            <ol>
+                <li>Answer: Start, Value: 1, Value: 2, Value: 3, End</li>
+            </ol>
+        </li>
+        <li>@Component({
+            selector: 'app-child',
+            template: `<p>{{ data }}</p>`
+            })
+            export class ChildComponent implements OnInit, OnChanges {
+            @Input() data!: string;
+
+            ngOnInit() {
+                console.log('Init:', this.data);
+            }
+
+            ngOnChanges() {
+                console.log('Changes:', this.data);
+              }
+            }
+            
+            .html file:- 
+              <app-child [data]="'Angular'"></app-child>
+
+            <ol>
+                <li>Answer: Init: Angular, Changes: Angular</li>
+            </ol>
+       </li>
+       <li>
+          const subject = new Subject<number>();
+          subject.next(1);
+
+          subject.subscribe(val => console.log('A:', val));
+          subject.next(2);
+
+          <ol>
+            <li>Answer: A: 2</li>
+          </ol>
+       </li>
+
+       <li>
+            console.log('Start');
+
+            setTimeout(() => console.log('setTimeout'), 0);
+            Promise.resolve().then(() => console.log('Promise'));
+            of(1).subscribe(() => console.log('Observable'));
+
+            console.log('End');
+
+           <ol>
+            <li>Answer: Start, End, Observable, Promise, setTimeout</li>
+           </ol>
+       </li>
+
+       <li>this.form = new FormGroup({
+            name: new FormControl('John')
+            });
+
+            console.log(this.form.value.name);
+            this.form.controls['name'].setValue('Alice');
+            console.log(this.form.value.name);
+            <ol>
+                <li>Answer: John, Alice</li>
+            </ol>
+       </li>
+
+    </ol>
+</body>
+</html>
